@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Hero.module.css";
+import whatsappIcon from "assets/images/whatsapp-btn.png";
 
 function Hero() {
   return (
@@ -35,6 +36,15 @@ function Hero() {
           </Link>
         </div>
       </div>
+
+      <div className={styles.whatsappBtn}>
+        <div className={`${styles.whatsappBtnStatus} fs-16px white`}>
+          WhatsApp us
+        </div>
+        <img src={whatsappIcon} alt="" />
+      </div>
+
+      <div className={styles.scrollIndicator}></div>
     </div>
   );
 }
