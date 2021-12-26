@@ -23,6 +23,7 @@
   --fs-16px: 16px;
   --fs-18px: 18px;
   --fs-20px: 20px;
+  --fs-30px: 30px;
 
   --yellow: #ffb83a;
   --yellow-2: #ffc107;
@@ -49,6 +50,13 @@
 }
 .fs-20px {
   font-size: 20px;
+}
+.fs-30px {
+  font-size: 30px;
+}
+
+.lh-35px {
+  line-height: 35px;
 }
 
 /* COLORS */
@@ -83,6 +91,9 @@
 }
 .weight-3 {
   font-weight: 300;
+}
+.weight-2 {
+  font-weight: 200;
 }
 
 /* margins */
@@ -171,6 +182,11 @@
   width: 90%;
   margin: 0 auto;
 }
+.container-wrapper-2 {
+  max-width: 1700px;
+  width: 83%;
+  margin: 0 auto;
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -208,4 +224,11 @@ input {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.title {
+  border-bottom: 2px solid #fed03d;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 0.8rem;
 }
