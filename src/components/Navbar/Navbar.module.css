@@ -1,0 +1,106 @@
+.navbar_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.navbar_wrapper.scrolled {
+  background-color: #262626;
+}
+
+.navbar {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.logo {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.navbar_links_wrapper {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: #262626;
+  transition: all 0.2s ease;
+  margin-top: -80px;
+}
+
+.navbar_wrapper.scrolled .navbar_links_wrapper {
+  border-bottom: 1px solid rgba(212, 212, 212, 0.178);
+}
+
+.navbar_links_wrapper.show {
+  margin-top: 0;
+}
+
+.navbar_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.navbar_links_left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_links_left a {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navbar_links_left a::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.navbar_links_left a:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+
+.navbar_links_left a:hover {
+  color: var(--yellow);
+}
+
+.navbar_links_left > :not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.navbar_links_right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_links_right > :not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.navbar_links_right a {
+  transition: all 0.2s ease;
+}
+.navbar_links_right a:hover {
+  color: white;
+}
