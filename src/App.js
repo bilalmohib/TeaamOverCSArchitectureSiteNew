@@ -1,9 +1,9 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home/Home";
 import AboutUs from "pages/AboutUs/AboutUs";
 import GetQuote from "pages/GetQuote/GetQuote";
 import Projects from "pages/Projects/Projects";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
