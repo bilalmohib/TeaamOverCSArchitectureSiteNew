@@ -1,0 +1,15 @@
+.home_division {
+  display: flex;
+}
+
+.home_division_left {
+  flex: 1;
+  margin-right: 3rem;
+}
+.home_division_right {
+  flex: 0.3;
+}
+
+.home_division_cards > :not(:last-child) {
+  margin-bottom: 1rem;
+}

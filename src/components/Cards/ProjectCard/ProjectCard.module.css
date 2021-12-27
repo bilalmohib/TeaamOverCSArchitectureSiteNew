@@ -1,0 +1,28 @@
+.project_card {
+  display: flex;
+  position: relative;
+}
+.project_card img {
+  width: 100%;
+  /* aspect-ratio: 1/0.8 !important; */
+}
+
+.text_wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  padding-top: 140px;
+  opacity: 0;
+
+  transition: all 0.2s ease;
+}
+
+.project_card:hover .text_wrapper {
+  opacity: 1;
+}

@@ -1,8 +1,3 @@
-.services_title_wrapper {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
 .services_cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);

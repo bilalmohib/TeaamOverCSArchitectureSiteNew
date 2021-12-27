@@ -1,0 +1,95 @@
+.footerTop_wrapper {
+  background: #dcddde;
+  padding: 25px 0;
+}
+
+.footerTop {
+  display: flex;
+}
+
+.footerTop > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footerTop > div:not(:last-child) {
+  margin-right: 7rem;
+}
+
+.footerTop > div:first-child button {
+  padding: 0.8rem 1rem;
+  background-color: #000;
+}
+
+.footerBottom_wrapper {
+  background: #000;
+  padding: 18px 0;
+}
+.footerBottom {
+}
+
+.footer_social_icons {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.footer_social_icons > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.footer_social_icons > a {
+  color: var(--darkest-red);
+  cursor: pointer;
+}
+
+.footer_social_icons > a:hover {
+  color: #888;
+}
+
+.footerTop > div:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.backToTop_btn {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.backToTop_btn:hover p {
+  font-weight: 700;
+}
+
+.backToTop_btn p {
+  margin-right: 0.5rem;
+}
+
+.footerBottom div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerBottom div:first-child {
+  margin-bottom: 0.2rem;
+}
+
+.footerBottom p:not(:last-child),
+.footerBottom a:not(:last-child) {
+  /* border: 2px solid red; */
+  margin-right: 1.5rem;
+}
+
+.footerBottom a:hover {
+  color: #888;
+}
+
+.footer_last_link {
+  width: 210px;
+}

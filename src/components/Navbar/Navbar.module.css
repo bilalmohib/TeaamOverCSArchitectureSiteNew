@@ -5,8 +5,12 @@
   background-color: transparent;
   width: 100%;
   transition: all 0.3s ease;
-
   z-index: 100;
+}
+
+.navbar_wrapper.scrollHide {
+  top: -100vh;
+  transition: all 1s ease;
 }
 
 .navbar_wrapper.scrolled {
@@ -61,12 +65,12 @@
   align-items: center;
 }
 
-.navbar_links_left a {
+.navbar_links_left .navbar_left_link {
   transition: all 0.2s ease;
   position: relative;
 }
 
-.navbar_links_left a::before {
+.navbar_links_left .navbar_left_link::before {
   content: "";
   position: absolute;
   top: 110%;
@@ -78,12 +82,20 @@
   transition: all 0.4s ease;
 }
 
-.navbar_links_left a:hover::before {
+.navbar_links_left .navbar_left_link:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+.navbar_left_link.nav_link_active {
+  color: var(--yellow);
+}
+
+.navbar_left_link.nav_link_active::before {
   width: 100%;
   opacity: 1;
 }
 
-.navbar_links_left a:hover {
+.navbar_links_left .navbar_left_link:hover {
   color: var(--yellow);
 }
 

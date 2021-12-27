@@ -15,6 +15,7 @@
 }
 
 :root {
+  --fs-57px: 57px;
   --fs-52px: 52px;
   --fs-21px: 21px;
   --fs-25px: 25px;
@@ -25,11 +26,27 @@
   --fs-20px: 20px;
   --fs-30px: 30px;
 
+  --fs-35px: 35px;
+  --fs-40px: 40px;
+
+  --fs-12px: 12px;
+  --fs-10px: 10px;
+
   --yellow: #ffb83a;
   --yellow-2: #ffc107;
   --gray: #9a9b9c;
+  --darkest-red: #231f20;
 }
 
+.fs-40px {
+  font-size: 40px;
+}
+.fs-35px {
+  font-size: 35px;
+}
+.fs-57px {
+  font-size: 57px;
+}
 .fs-52px {
   font-size: 52px;
 }
@@ -54,9 +71,18 @@
 .fs-30px {
   font-size: 30px;
 }
+.fs-12px {
+  font-size: var(--fs-12px);
+}
+.fs-10px {
+  font-size: var(--fs-10px);
+}
 
 .lh-35px {
   line-height: 35px;
+}
+.lh-1 {
+  line-height: 1;
 }
 
 /* COLORS */
@@ -68,6 +94,9 @@
 }
 .gray {
   color: var(--gray);
+}
+.darkest-red {
+  color: var(--darkest-red);
 }
 
 /* font-weights */
@@ -152,6 +181,9 @@
 .margin-center {
   margin: 0 auto;
 }
+.mt-88px {
+  margin-top: 88px;
+}
 
 /* paddings */
 .py-30px {
@@ -226,9 +258,18 @@ input {
   background-color: transparent;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .title {
   border-bottom: 2px solid #fed03d;
   width: fit-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding-bottom: 0.8rem;
+}
+
+.title_wrapper {
+  max-width: 850px;
+  margin: 0 auto;
 }

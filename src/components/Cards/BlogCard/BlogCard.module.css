@@ -1,0 +1,6 @@
+.blog_card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  padding-bottom: 4rem;
+}
