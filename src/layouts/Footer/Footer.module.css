@@ -17,7 +17,7 @@
   margin-right: 7rem;
 }
 
-.footerTop > div:first-child button {
+.footerTop > div:first-child a {
   padding: 0.8rem 1rem;
   background-color: #000;
 }

@@ -21,9 +21,12 @@ function Footer() {
               <p className="font-open-sans darkest-red weight-9 fs-14px mb-20px">
                 Marketing
               </p>
-              <button className="font-open-sans white weight-5 fs-14px uppercase pointer">
-                Sign up to stay in touch
-              </button>
+              <Link
+                to="/get-quote"
+                className="font-open-sans white weight-5 fs-14px uppercase pointer"
+              >
+                Get Quote
+              </Link>
             </div>
             <div>
               <p className="font-open-sans darkest-red weight-9 fs-14px mb-20px">
