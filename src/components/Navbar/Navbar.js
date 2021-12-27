@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 import { FaInstagramSquare, FaHouzz } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({ hamburgerColor = "white" }) {
   const [show, setshow] = React.useState(false);
   const [scrolled, setscrolled] = React.useState(false);
   const [lastScrollTop, setlastScrollTop] = React.useState(0);
@@ -149,7 +149,8 @@ function Navbar() {
 
           <FiMenu
             size={35}
-            className="white pointer"
+            className={`white pointer ${styles.navbar_hamburger}`}
+            color={hamburgerColor}
             onClick={() => setshow(!show)}
           />
         </div>

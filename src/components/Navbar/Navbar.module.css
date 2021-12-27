@@ -5,7 +5,7 @@
   background-color: transparent;
   width: 100%;
   transition: all 0.3s ease;
-  z-index: 100;
+  z-index: 100000;
 }
 
 .navbar_wrapper.scrollHide {
@@ -15,6 +15,10 @@
 
 .navbar_wrapper.scrolled {
   background-color: #262626;
+}
+
+.navbar_wrapper.scrolled .navbar_hamburger {
+  color: white !important;
 }
 
 .navbar {

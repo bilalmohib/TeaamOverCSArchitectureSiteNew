@@ -14,9 +14,16 @@ import SwiperCore, { Navigation, EffectFade, Autoplay } from "swiper";
 import { FiHome } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineFlag } from "react-icons/ai";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
 import Counter from "components/Counter/Counter";
+import ReactMapGL, {
+  NavigationControl,
+  FullscreenControl,
+  GeolocateControl,
+  FlyToInterpolator,
+} from "react-map-gl";
+import Pins from "./Pins";
+
+import CITIES from "assets/Data/cities.json";
 
 SwiperCore.use([Navigation, EffectFade, Autoplay]);
 
@@ -30,11 +37,43 @@ const SlideComponent = ({ text, img }) => {
 };
 
 function AboutUs() {
-  const [viewPortEntered, setViewPortEntered] = React.useState(false);
+  const [viewport, setViewport] = React.useState({
+    latitude: 37.7577,
+    longitude: -100.4376,
+    zoom: 2.5,
+  });
+
+  const geolocateStyle = {
+    top: 0,
+    left: 0,
+    padding: "10px",
+  };
+
+  const fullscreenControlStyle = {
+    top: 36,
+    left: 0,
+    padding: "10px",
+  };
+
+  const navStyle = {
+    top: 72,
+    left: 0,
+    padding: "10px",
+  };
+
+  const onSelectCity = React.useCallback(({ longitude, latitude }) => {
+    setViewport({
+      longitude,
+      latitude,
+      zoom: 11,
+      transitionInterpolator: new FlyToInterpolator({ speed: 2 }),
+      transitionDuration: "auto",
+    });
+  }, []);
 
   return (
     <div>
-      <Navbar />
+      <Navbar hamburgerColor="black" />
 
       <div className="mt-88px ">
         <div className="aboutus_hero mb-70px ">
@@ -102,39 +141,59 @@ function AboutUs() {
           </Swiper>
         </div>
 
-        <div className="mb-50px">
+        <div className="mb-70px">
           <div className="container-wrapper">
-            <div className="mb-50px">
-              <p className="fs-40px mb-20px">Who we are</p>
+            <div className="aboutus_section">
+              <div className="aboutus_section_left">
+                <div className="mb-50px">
+                  <p className="fs-40px mb-20px uppercase">Who we are</p>
 
-              <p className="fs-20px mb-15px">
-                Chapman Taylor is an award-winning practice of global
-                architects, masterplanners and interior designers, known for
-                designing places and buildings that are both creative and
-                successful.
-              </p>
-              <p className="fs-20px">
-                Established in 1959, we have longstanding relationships with
-                many of the world’s leading developers, contractors,
-                consultants, investors and brands.
-              </p>
-            </div>
+                  <p className="fs-20px mb-15px">
+                    Chapman Taylor is an award-winning practice of global
+                    architects, masterplanners and interior designers, known for
+                    designing places and buildings that are both creative and
+                    successful.
+                  </p>
+                  <p className="fs-20px">
+                    Established in 1959, we have longstanding relationships with
+                    many of the world’s leading developers, contractors,
+                    consultants, investors and brands.
+                  </p>
+                </div>
+                <div className="aboutus_details">
+                  <div>
+                    <FiHome size={60} />
+                    <Counter end={2000} />
+                    <p className="fs-25px weight-3">Projects</p>
+                  </div>
+                  <div>
+                    <IoLocationOutline size={60} />
+                    <Counter end={17} showPlusSign={false} />
+                    <p className="fs-25px weight-3">Locations</p>
+                  </div>
+                  <div>
+                    <AiOutlineFlag size={60} />
+                    <Counter end={100} />
+                    <p className="fs-25px weight-3">Cities</p>
+                  </div>
+                </div>
+              </div>
+              <div className="aboutus_section_right">
+                <p className="fs-40px mb-20px uppercase">Our Offices</p>
+                <ReactMapGL
+                  {...viewport}
+                  mapboxApiAccessToken="pk.eyJ1IjoiYWJkdWxsYWhtZWhib29iIiwiYSI6ImNreG9yZ3o4NjRhZHUyeXE5eTJkb3lwNzEifQ.stiPNaCQ2Z3av7waoQMqnw"
+                  width="100%"
+                  height="100%"
+                  onViewportChange={(newviewport) => setViewport(newviewport)}
+                  className="myMap"
+                >
+                  <Pins data={CITIES} onSelectCity={onSelectCity} />
 
-            <div className="aboutus_details">
-              <div>
-                <FiHome size={60} />
-                <Counter end={2000} />
-                <p className="fs-25px weight-3">Projects</p>
-              </div>
-              <div>
-                <IoLocationOutline size={60} />
-                <Counter end={17} showPlusSign={false} />
-                <p className="fs-25px weight-3">Locations</p>
-              </div>
-              <div>
-                <AiOutlineFlag size={60} />
-                <Counter end={100} />
-                <p className="fs-25px weight-3">Cities</p>
+                  <GeolocateControl style={geolocateStyle} />
+                  <FullscreenControl style={fullscreenControlStyle} />
+                  <NavigationControl style={navStyle} />
+                </ReactMapGL>
               </div>
             </div>
           </div>

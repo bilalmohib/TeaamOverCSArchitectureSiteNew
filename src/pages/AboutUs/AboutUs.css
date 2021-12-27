@@ -69,6 +69,7 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  width: 70%;
 }
 
 .aboutus_details > div:not(:last-child) {
@@ -83,4 +84,26 @@
 
 .aboutus_details > div > :first-child {
   margin-bottom: 0.7rem;
+}
+
+.aboutus_section {
+  display: flex;
+}
+
+.aboutus_section_left {
+  flex: 1;
+  margin-right: 5rem;
+}
+.aboutus_section_right {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}
+.mapboxgl-ctrl-bottom-right {
+  display: none;
 }
