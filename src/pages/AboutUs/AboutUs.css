@@ -24,16 +24,18 @@
   z-index: -1;
 }
 
-.aboutus_hero_text.top {
+.aboutus_hero_text {
+  display: block;
   text-shadow: #231f20 3px 4px 6px;
+}
+
+.aboutus_hero_text_wrapper.top {
   position: absolute;
   top: 0;
   left: 0;
   padding: 72px 35px;
 }
-
-.aboutus_hero_text.bottom {
-  text-shadow: #231f20 3px 4px 6px;
+.aboutus_hero_text_wrapper.bottom {
   position: absolute;
   bottom: 0;
   left: 0;

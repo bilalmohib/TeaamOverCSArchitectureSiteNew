@@ -2,12 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 
-function ProjectCard({ img, text }) {
+function ProjectCard({ img, disc, text, linkTo = "/" }) {
   return (
-    <Link to="/" className={styles.project_card}>
-      <img src={img} alt="" />
+    <Link to={linkTo} className={styles.project_card}>
+      <div className={styles.project_card_image_wrapper}>
+        <img src={img} alt="" />
+        <div className={`${styles.text_wrapper} fs-20px white`}>{disc}</div>
+      </div>
 
-      <div className={`${styles.text_wrapper} fs-20px white`}>{text}</div>
+      {text ? (
+        <p className="fs-16px weight-6 darkest-red uppercase">{text}</p>
+      ) : (
+        ""
+      )}
     </Link>
   );
 }

@@ -32,12 +32,12 @@ function Projects({ showTitles = true }) {
       )}
 
       <div className={styles.project_cards}>
-        <ProjectCard text="In the Works" img={projectImg1} />
-        <ProjectCard text="Sarasota House" img={projectImg2} />
-        <ProjectCard text="North Sea House" img={projectImg3} />
-        <ProjectCard text="Bridgehampton Beach House" img={projectImg4} />
-        <ProjectCard text="Southampton House" img={projectImg5} />
-        <ProjectCard text="Bridgehampton House" img={projectImg6} />
+        <ProjectCard disc="In the Works" img={projectImg1} />
+        <ProjectCard disc="Sarasota House" img={projectImg2} />
+        <ProjectCard disc="North Sea House" img={projectImg3} />
+        <ProjectCard disc="Bridgehampton Beach House" img={projectImg4} />
+        <ProjectCard disc="Southampton House" img={projectImg5} />
+        <ProjectCard disc="Bridgehampton House" img={projectImg6} />
       </div>
     </div>
   );
