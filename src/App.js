@@ -6,6 +6,7 @@ import Projects from "pages/Projects/Projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ServiceLayout from "layouts/ServiceLayout/ServiceLayout";
 import { sliderData } from "assets/Data/sliderData";
+import Blogs from "pages/Blogs/Blogs";
 
 const layOutData = {
   sliderData,
@@ -214,6 +215,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/get-quote" element={<GetQuote />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="services">
           <Route index={true} element={<ServiceLayout data={layOutData} />} />
 

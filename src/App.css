@@ -35,6 +35,7 @@
   --yellow: #ffb83a;
   --yellow-2: #ffc107;
   --gray: #9a9b9c;
+  --gray-2: #58595b;
   --darkest-red: #231f20;
 }
 
@@ -94,6 +95,9 @@
 }
 .gray {
   color: var(--gray);
+}
+.gray-2 {
+  color: var(--gray-2);
 }
 .darkest-red {
   color: var(--darkest-red);
@@ -267,6 +271,10 @@ input {
   background-color: transparent;
 }
 
+.relative {
+  position: relative;
+}
+
 .italic {
   font-style: italic;
 }
@@ -294,4 +302,8 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+.custom-underline {
+  border-bottom: 1px solid var(--gray-2);
 }
