@@ -6,35 +6,37 @@ import styles from "./Blogs.module.css";
 import { FaRegComment } from "react-icons/fa";
 import { BlogsData } from "assets/Data/BlogsData";
 import { FiChevronDown } from "react-icons/fi";
+import { Outlet } from "react-router-dom";
 
-const BlogCard = ({ img, title, by, on, disc, comments }) => {
+const BlogCard = ({ data }) => {
+  const { img, title, by, on, disc, comments, id } = data;
   return (
     <div className={styles.blog_card}>
-      <Link to="/" className={styles.blog_card_img}>
+      <Link to={id} className={styles.blog_card_img}>
         <img src={img} alt="" />
       </Link>
       <div className={styles.blog_card_right}>
-        <Link to="/" className="fs-21px block gray-2 mb-25px">
+        <Link to={id} className="fs-21px block gray-2 mb-25px">
           {title}
         </Link>
         <p className="fs-18px gray weight-3 mb-25px">
           By: <span className="weight-5">{by}</span> · {on}
         </p>
 
-        {comments === 0 ? (
+        {comments.length === 0 ? (
           ""
         ) : (
           <Link
-            to={"/"}
+            to={id}
             className={`mb-40px weight-3 fs-18px gray ${styles.blog_comments}`}
           >
-            <FaRegComment /> <p>{comments} comments</p>
+            <FaRegComment /> <p>{comments.length} comments</p>
           </Link>
         )}
 
         <p className="fs-18px gray-2 weight-3 mb-35px">{disc}</p>
 
-        <Link to="/" className="fs-18px weight-3 gray custom-underline">
+        <Link to={id} className="fs-18px weight-3 gray custom-underline">
           Read More
         </Link>
       </div>
@@ -71,7 +73,9 @@ function Blogs() {
   return (
     <div>
       <Navbar hamburgerColor="black" />
+
       <div className="mt-120px mb-100px">
+        <Outlet />
         <div className="container-wrapper relative">
           <div className={styles.dropdownWrapper}>
             <div
@@ -103,14 +107,7 @@ function Blogs() {
           </div>
 
           {BlogsData.map((data, index) => (
-            <BlogCard
-              img={data.img}
-              title={data.title}
-              by={data.by}
-              on={data.on}
-              disc={data.disc}
-              comments={data.comments}
-            />
+            <BlogCard data={data} />
           ))}
         </div>
       </div>

@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ServiceLayout from "layouts/ServiceLayout/ServiceLayout";
 import { sliderData } from "assets/Data/sliderData";
 import Blogs from "pages/Blogs/Blogs";
+import BlogModal from "components/Modal/BlogModal/BlogModal";
+import React from "react";
 
 const layOutData = {
   sliderData,
@@ -208,6 +210,9 @@ const layOutData = {
 };
 
 function App() {
+  React.useEffect(() => {
+    document.body.style.overflowY = "scroll";
+  }, []);
   return (
     <Router>
       <Routes>
@@ -215,7 +220,9 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/get-quote" element={<GetQuote />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs" element={<Blogs />}>
+          <Route path=":blogId" element={<BlogModal />} />
+        </Route>
         <Route path="services">
           <Route index={true} element={<ServiceLayout data={layOutData} />} />
 
@@ -226,10 +233,6 @@ function App() {
               element={<ServiceLayout data={data.content} />}
             />
           ))}
-
-          {/* <Route path="interior" element={} />
-          <Route path="landscaping" element={} />
-          <Route path="construction" element={} /> */}
         </Route>
       </Routes>
     </Router>

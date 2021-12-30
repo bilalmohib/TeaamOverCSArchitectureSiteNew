@@ -1,0 +1,126 @@
+.blog_details_modal_wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100000000;
+  padding: 40px;
+}
+
+.blog_details_modal {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.close_modal {
+  position: fixed;
+  top: 60px;
+  right: 80px;
+}
+
+.hero_img {
+  width: 100%;
+}
+
+.blog_disc {
+  display: flex;
+  padding-top: 4rem;
+  border-top: 1px solid rgb(238, 238, 238);
+}
+
+.blog_disc_left {
+  margin-right: 4rem;
+}
+
+.blog_analytics {
+  margin-top: 5rem;
+  display: flex;
+}
+
+.blog_analytics_left {
+  flex: 1;
+  margin-right: 4rem;
+}
+.blog_analytics_right {
+  flex: 1;
+}
+
+.blog_social_icons {
+  display: flex;
+}
+
+.blog_social_icons a {
+  color: var(--gray);
+  display: flex;
+}
+.blog_social_icons a:hover {
+  color: var(--gray-2);
+}
+
+.blog_social_icons > :not(:last-child) {
+  margin-right: 0.2rem;
+}
+
+.contact_wrapper {
+  display: flex;
+  border-top: 1px solid rgb(238, 238, 238);
+  padding-top: 3rem;
+}
+
+.contact_left {
+  flex: 1;
+  margin-right: 4rem;
+}
+.contact_right {
+  flex: 1;
+}
+
+.contact_right .form_row {
+  display: flex;
+}
+.form_row > :first-child {
+  margin-right: 2rem;
+}
+.contact_right form {
+  position: sticky;
+  top: 30px;
+  left: 0;
+}
+.contact_right input {
+  border: 1px solid #edeeee;
+  height: 36px;
+  padding: 0 18px;
+}
+
+.contact_right textarea {
+  border: 1px solid #edeeee;
+  padding: 18px;
+  width: 100%;
+  height: 250px;
+  resize: none;
+  outline: none;
+}
+
+.contact_right button[type="submit"] {
+  height: 36px;
+  background: #58595b;
+  padding: 0 17px;
+}
+
+.post_navigator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  border-top: 1px solid rgb(238, 238, 238);
+}
+
+.comment {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
