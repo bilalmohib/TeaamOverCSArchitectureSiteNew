@@ -4,13 +4,6 @@
   justify-content: space-between;
 }
 
-.filterBy_wrapper select {
-  width: 250px;
-  border: 2px solid gray;
-  padding: 0.4rem 1rem;
-  border-radius: 3px;
-}
-
 .filterBy_wrapper > div:last-child {
   display: flex;
   align-items: center;

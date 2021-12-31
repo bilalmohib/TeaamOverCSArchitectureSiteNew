@@ -1,0 +1,20 @@
+.videos_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.videos_filter {
+  display: flex;
+  align-items: center;
+}
+
+.videos_filter :first-child {
+  margin-right: 1rem;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

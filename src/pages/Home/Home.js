@@ -4,7 +4,7 @@ import Footer from "layouts/Footer/Footer";
 import Hero from "layouts/Home/Hero/Hero";
 import Projects from "layouts/Home/Projects/Projects";
 import Services from "layouts/Home/Services/Services";
-import YoutubeVideos from "layouts/Home/YoutubeVideos/YoutubeVideos";
+import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
 import React from "react";
 import styles from "./Home.module.css";
 
@@ -23,7 +23,7 @@ function Home() {
               <Services />
 
               <div className="mb-75px">
-                <YoutubeVideos />
+                <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
               </div>
               <Projects />
             </div>

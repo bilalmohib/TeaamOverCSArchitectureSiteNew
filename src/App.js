@@ -9,6 +9,8 @@ import { sliderData } from "assets/Data/sliderData";
 import Blogs from "pages/Blogs/Blogs";
 import BlogModal from "components/Modal/BlogModal/BlogModal";
 import React from "react";
+import Videos from "pages/Videos/Videos";
+import Contact from "pages/Contact/Contact";
 
 const layOutData = {
   sliderData,
@@ -234,6 +236,8 @@ function App() {
             />
           ))}
         </Route>
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </Router>
   );

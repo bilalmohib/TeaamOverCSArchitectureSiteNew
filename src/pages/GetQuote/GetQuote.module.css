@@ -1,5 +1,5 @@
 .getQuote {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../../assets/images/get-quote-bg.jpg);
   background-size: cover;
   background-position: center center;
