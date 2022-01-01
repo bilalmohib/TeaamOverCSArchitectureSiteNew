@@ -10,7 +10,7 @@ function GetQuote() {
       <div className={`${styles.getQuote} pt-88px`}>
         <div className="container-wrapper">
           <div className={styles.getQuote_wrapper}>
-            <p className="fs-52px mb-30px white weight-2">
+            <p className="fs-52px mb-30px white weight-2 text-center">
               Our Experts Will be <span className="weight-4">Happy</span> to
               Help You
             </p>

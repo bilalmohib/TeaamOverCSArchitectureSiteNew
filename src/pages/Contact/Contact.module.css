@@ -62,3 +62,25 @@
   top: 120px;
   left: 0;
 }
+
+@media (max-width: 1000px) {
+  .contact_info {
+    flex-direction: column-reverse;
+  }
+
+  .contact_info_left {
+    flex: 1;
+    margin-right: 0rem;
+  }
+
+  .contact_info_right {
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .map {
+    height: 250px;
+  }
+}

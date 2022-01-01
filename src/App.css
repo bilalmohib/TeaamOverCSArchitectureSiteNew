@@ -378,21 +378,15 @@ select {
     --fs-14px: 14px;
     --fs-14px: 14px;
     --fs-16px: 16px;
-    --fs-18px: 18px;
     --fs-20px: 16px;
     --fs-30px: 20px;
   }
 }
+
 @media (max-width: 500px) {
   :root {
     --fs-57px: 27px;
-    --fs-52px: 30px;
-    --fs-21px: 16px;
-    --fs-25px: 16px;
-    --fs-14px: 14px;
-    --fs-14px: 14px;
     --fs-16px: 14px;
-    --fs-18px: 18px;
   }
 
   .mt-120px {

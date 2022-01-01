@@ -106,9 +106,11 @@ function Blogs() {
             </div>
           </div>
 
-          {BlogsData.map((data, index) => (
-            <BlogCard data={data} />
-          ))}
+          <div className={styles.blogCard_wrapper}>
+            {BlogsData.map((data, index) => (
+              <BlogCard data={data} />
+            ))}
+          </div>
         </div>
       </div>
 

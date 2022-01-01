@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   position: relative;
   z-index: 10;
+  padding-bottom: 2rem;
 }
 
 .getQuote::before {
@@ -124,4 +125,38 @@
   color: #fff;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .getQuote {
+    padding-top: 55px;
+  }
+}
+
+@media (max-width: 650px) {
+  .get_quote_form {
+    padding: 41px 30px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 450px) {
+  .get_quote_form_row {
+    flex-direction: column;
+  }
+
+  .get_quote_form_row > div:first-child {
+    margin-right: 0rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .get_quote_form_row > div {
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .getQuote {
+    padding-top: 80px;
+  }
 }

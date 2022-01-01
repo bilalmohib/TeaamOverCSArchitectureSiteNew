@@ -18,3 +18,29 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media (max-width: 1000px) {
+  .videos_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .videos_filter {
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+
+  .videos_filter select {
+    width: 160px;
+  }
+
+  .titleBar {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .videos_container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -32,3 +32,9 @@
   right: 30px;
   cursor: pointer;
 }
+
+@media (max-width: 760px) {
+  .video_popup {
+    padding: 1rem;
+  }
+}
