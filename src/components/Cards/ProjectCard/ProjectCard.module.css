@@ -15,7 +15,6 @@
 .project_card img {
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 1/0.8 !important; */
 }
 
 .text_wrapper {
@@ -26,14 +25,31 @@
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 0 1.5rem;
-  padding-top: 140px;
+  padding-bottom: 4rem;
   opacity: 0;
-
   transition: all 0.2s ease;
+  flex-wrap: wrap;
+  word-break: keep-all;
 }
 
 .project_card:hover .text_wrapper {
   opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .text_wrapper {
+    align-items: center;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 400px) {
+  .text_wrapper {
+    padding: 0 1rem;
+  }
+
+  .text_wrapper {
+    font-size: 12px;
+  }
 }

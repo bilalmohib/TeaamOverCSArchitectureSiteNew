@@ -69,7 +69,8 @@ function Footer() {
       <div className={styles.footerBottom_wrapper}>
         <div className="container-wrapper">
           <div className={styles.footerBottom}>
-            <div>
+            {/* left */}
+            <div className={styles.footer_bottom_link}>
               <div>
                 <p className="font-open-sans white weight-6 fs-12px">
                   © Chapman Taylor 2021
@@ -78,21 +79,6 @@ function Footer() {
                   All rights reserved
                 </p>
               </div>
-              <div>
-                <p
-                  className={`font-open-sans white weight-8 fs-12px ${styles.footer_last_link}`}
-                >
-                  Design:{" "}
-                  <Link
-                    to="/"
-                    className="font-open-sans weight-6 white fs-12px"
-                  >
-                    &nbsp;Chapman Taylor Graphics
-                  </Link>
-                </p>
-              </div>
-            </div>
-            <div>
               <div>
                 <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   Preferences Centre
@@ -109,6 +95,23 @@ function Footer() {
                 <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   COVID-19 - Return to work (UK) - April 2021
                 </Link>
+              </div>
+            </div>
+
+            {/* right */}
+            <div>
+              <div>
+                <p
+                  className={`font-open-sans white weight-8 fs-12px ${styles.footer_last_link}`}
+                >
+                  Design:{" "}
+                  <Link
+                    to="/"
+                    className="font-open-sans weight-6 white fs-12px"
+                  >
+                    &nbsp;Chapman Taylor Graphics
+                  </Link>
+                </p>
               </div>
               <div>
                 <p

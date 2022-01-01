@@ -61,7 +61,9 @@ function AboutUs() {
               </div>
               <div className="aboutus_section_right">
                 <p className="fs-40px mb-20px uppercase">Our Offices</p>
-                <Map />
+                <div className="about_map_wrapper">
+                  <Map />
+                </div>
               </div>
             </div>
           </div>

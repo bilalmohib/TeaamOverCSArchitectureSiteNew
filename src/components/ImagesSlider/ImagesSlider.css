@@ -1,0 +1,102 @@
+.aboutus_hero_text_wrapper {
+  padding: 72px 35px;
+  position: absolute;
+}
+
+.aboutus_hero_text_wrapper.top {
+  top: 0;
+  left: 0;
+}
+.aboutus_hero_text_wrapper.bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.aboutus_hero_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.aboutus_hero {
+  background: #f0f0f0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* height: 800px; */
+  /* min-height: 600px; */
+  /* max-height: 1120px; */
+  /* height: 80vh; */
+  /* height: calc(80vh - 90px); */
+
+  aspect-ratio: 16/7.5;
+}
+
+.aboutus_hero .swiper-container {
+  height: 100%;
+}
+
+.aboutus_hero_text {
+  display: block;
+  text-shadow: #231f20 3px 4px 6px;
+}
+
+.aboutus_hero .swiper-button-next,
+.aboutus_hero .swiper-button-prev {
+  color: white;
+  opacity: 0.4;
+}
+
+.aboutus_hero .swiper-button-next:hover,
+.aboutus_hero .swiper-button-prev:hover {
+  color: white;
+  opacity: 1;
+}
+
+.aboutus_hero .swiper-button-prev {
+  left: 25px;
+}
+.aboutus_hero .swiper-button-next {
+  right: 25px;
+}
+
+.aboutus_hero .swiper-button-next::after,
+.aboutus_hero .swiper-button-prev::after {
+  font-size: 4rem;
+}
+
+@media (max-width: 760px) {
+  .aboutus_hero .swiper-button-prev {
+    left: 5px;
+  }
+  .aboutus_hero .swiper-button-next {
+    right: 5px;
+  }
+
+  .aboutus_hero .swiper-button-next::after,
+  .aboutus_hero .swiper-button-prev::after {
+    font-size: 2.2rem;
+  }
+
+  .aboutus_hero_text_wrapper {
+    position: static;
+    padding: 50px 35px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutus_hero_text_wrapper.bottom {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutus_hero_text_wrapper {
+    padding: 30px 35px;
+  }
+}

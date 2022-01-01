@@ -134,3 +134,24 @@
   opacity: 1;
   transform: translateY(-50%) scale(1);
 }
+
+@media (max-width: 1000px) {
+  .hero_cards > a {
+    padding: 0.2rem 0;
+  }
+
+  .hero_center {
+    min-width: auto !important;
+  }
+}
+@media (max-width: 760px) {
+  .hero_center {
+    width: 90%;
+  }
+}
+@media (max-width: 550px) {
+  .hero_cards {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

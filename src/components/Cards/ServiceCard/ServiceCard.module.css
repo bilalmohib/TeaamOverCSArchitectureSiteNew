@@ -46,3 +46,16 @@
 .service_card:hover::before {
   background-color: rgba(255, 255, 255, 0.005);
 }
+
+@media (max-width: 1000px) {
+  .service_card {
+    height: auto;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 1rem;
+  }
+}

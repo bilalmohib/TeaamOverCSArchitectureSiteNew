@@ -15,3 +15,16 @@
 .card:hover > p {
   color: #e10600;
 }
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}

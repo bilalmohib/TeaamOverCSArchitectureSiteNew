@@ -1,14 +1,44 @@
 .filterBy_wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .filterBy_wrapper > div:last-child {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
+  gap: 1rem;
 }
 
-.filterBy_wrapper > div:last-child > :not(:last-child) {
-  margin-right: 1rem;
+@media (max-width: 900px) {
+  .filterBy_wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .filterBy_wrapper > div:last-child {
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .filterBy_wrapper > div:last-child > select {
+    width: 180px;
+  }
+}
+@media (max-width: 550px) {
+  .filterBy_wrapper > div:last-child > select {
+    width: 100%;
+  }
+
+  .filterBy_wrapper > div:last-child {
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    column-gap: 2rem;
+  }
+
+  .filterBy_wrapper > div:last-child > select:last-child {
+    grid-column: 1/-1;
+  }
 }

@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 import { FaInstagramSquare, FaHouzz } from "react-icons/fa";
+import { RiCloseFill } from "react-icons/ri";
 
 function Navbar({ hamburgerColor = "white" }) {
   const [show, setshow] = React.useState(false);
@@ -49,8 +50,14 @@ function Navbar({ hamburgerColor = "white" }) {
       <div
         className={`${styles.navbar_links_wrapper} ${show ? styles.show : ""}`}
       >
-        <div className="container-wrapper">
+        <div className={styles.container_wrapper}>
           <div className={styles.navbar_links}>
+            <RiCloseFill
+              className={styles.cross_sidebar_icon}
+              size={30}
+              color="white"
+              onClick={() => setshow(false)}
+            />
             <div className={styles.navbar_links_left}>
               <NavLink
                 to="/"

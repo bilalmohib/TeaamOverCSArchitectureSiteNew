@@ -13,3 +13,52 @@
 .home_division_cards > :not(:last-child) {
   margin-bottom: 1rem;
 }
+
+@media (max-width: 1000px) {
+  .home_division {
+    flex-direction: column;
+  }
+  .home_division_left {
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .home_division_cards {
+    display: flex;
+  }
+
+  .home_division_cards > div,
+  .home_division_cards > a {
+    flex: 1;
+  }
+
+  .home_division_cards > :not(:last-child) {
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .home_division_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .home_division_cards > :not(:last-child) {
+    margin-bottom: 0rem;
+    margin-right: 0rem;
+  }
+}
+@media (max-width: 500px) {
+  .home_division_cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .home_division_cards {
+    grid-template-columns: 1fr;
+  }
+}
