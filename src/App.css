@@ -340,6 +340,11 @@ select {
   object-fit: cover;
 }
 
+.blogs_and_news_slider .swiper-slide {
+  flex: 1 !important;
+  height: auto !important;
+}
+
 @media (max-width: 1200px) {
   :root {
     --fs-12px: 10px;

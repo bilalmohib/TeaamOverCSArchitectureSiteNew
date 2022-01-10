@@ -1,0 +1,27 @@
+.home_division_cards {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.home_division_cards_header {
+  background-color: #ffc107;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news_navigation_btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.news_navigation_btn > button {
+  display: flex;
+}
+
+.news_navigation_btn > :first-child {
+  margin-right: 5px;
+}

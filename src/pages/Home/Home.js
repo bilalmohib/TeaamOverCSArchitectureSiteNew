@@ -1,4 +1,4 @@
-import BlogCard from "components/Cards/BlogCard/BlogCard";
+import LatestCardsWrapper from "components/Cards/LatestCardsWrapper/LatestCardsWrapper";
 import Navbar from "components/Navbar/Navbar";
 import Footer from "layouts/Footer/Footer";
 import Hero from "layouts/Home/Hero/Hero";
@@ -7,6 +7,7 @@ import Services from "layouts/Home/Services/Services";
 import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
 import React from "react";
 import styles from "./Home.module.css";
+import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 
 function Home() {
   return (
@@ -28,31 +29,17 @@ function Home() {
               <Projects />
             </div>
             <div className={styles.home_division_right}>
-              <div className="mb-50px">
-                <p className="fs-20px weight-2 mb-20px">Blogs</p>
-                <div className={styles.home_division_cards}>
-                  <BlogCard text="Blog" />
-                  <BlogCard text="Blog" />
-                  <BlogCard text="Blog" />
-                  <BlogCard text="Blog" />
+              <p className="fs-20px weight-2 mb-20px">The Latest</p>
+
+              <div className={styles.home_division_right_cards_wrapper}>
+                <div>
+                  <LatestCardsWrapper
+                    data={blogsAndNewsData}
+                    title="Blogs & News"
+                  />
                 </div>
-              </div>
-              <div className="mb-30px">
-                <p className="fs-20px weight-2 mb-20px">Videos</p>
-                <div className={styles.home_division_cards}>
-                  <BlogCard text="Video" />
-                  <BlogCard text="Video" />
-                  <BlogCard text="Video" />
-                  <BlogCard text="Video" />
-                </div>
-              </div>
-              <div className="mb-30px">
-                <p className="fs-20px weight-2 mb-20px">News</p>
-                <div className={styles.home_division_cards}>
-                  <BlogCard text="News" />
-                  <BlogCard text="News" />
-                  <BlogCard text="News" />
-                  <BlogCard text="News" />
+                <div>
+                  <LatestCardsWrapper data={blogsAndNewsData} title="Videos" />
                 </div>
               </div>
             </div>
