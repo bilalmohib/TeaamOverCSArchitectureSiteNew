@@ -13,6 +13,12 @@
   margin-bottom: 50px;
 }
 
+.youtubeVideos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 @media (max-width: 1000px) {
   .home_division {
     flex-direction: column;
@@ -41,5 +47,9 @@
   .home_division_right_cards_wrapper > :first-child {
     margin-right: 0rem;
     margin-bottom: 1rem;
+  }
+
+  .youtubeVideos {
+    grid-template-columns: 1fr;
   }
 }

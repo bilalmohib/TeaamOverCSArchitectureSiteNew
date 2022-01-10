@@ -28,12 +28,6 @@ function Hero() {
           <Link to="/" className="font-roboto fs-25px white weight-4">
             Project Management
           </Link>
-          <Link to="/" className="font-roboto fs-25px white weight-4">
-            Furniture
-          </Link>
-          <Link to="/" className="font-roboto fs-25px white weight-4">
-            Landscaping
-          </Link>
         </div>
       </div>
 

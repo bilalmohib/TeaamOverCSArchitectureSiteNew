@@ -23,7 +23,8 @@ function Home() {
             <div className={styles.home_division_left}>
               <Services />
 
-              <div className="mb-75px">
+              <div className={`${styles.youtubeVideos} mb-75px`}>
+                <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                 <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
               </div>
               <Projects />
