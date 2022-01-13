@@ -12,9 +12,13 @@ function ServiceLayout({ data }) {
     <div>
       <Navbar hamburgerColor="black" />
 
-      <div className="mt-88px mb-70px">
-        <ImagesSlider sliderData={sliderData} />
-      </div>
+      {sliderData ? (
+        <div className="mt-88px mb-70px">
+          <ImagesSlider sliderData={sliderData} />
+        </div>
+      ) : (
+        ""
+      )}
 
       <div className="container-wrapper">
         {pageName ? (
