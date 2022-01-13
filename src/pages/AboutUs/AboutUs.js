@@ -12,6 +12,9 @@ import ImagesSlider from "components/ImagesSlider/ImagesSlider";
 import { sliderData } from "assets/Data/sliderData";
 import Map from "components/Map/Map";
 
+import { HiOutlineHome } from "react-icons/hi";
+import { BiBuildingHouse } from "react-icons/bi";
+
 function AboutUs() {
   return (
     <div>
@@ -43,7 +46,7 @@ function AboutUs() {
                 </div>
                 <div className="aboutus_details">
                   <div>
-                    <FiHome size={60} />
+                    <HiOutlineHome size={60} />
                     <Counter end={2000} />
                     <p className="fs-25px weight-3">Projects</p>
                   </div>
@@ -53,7 +56,7 @@ function AboutUs() {
                     <p className="fs-25px weight-3">Locations</p>
                   </div>
                   <div>
-                    <AiOutlineFlag size={60} />
+                    <BiBuildingHouse size={60} />
                     <Counter end={100} />
                     <p className="fs-25px weight-3">Cities</p>
                   </div>

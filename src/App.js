@@ -28,13 +28,53 @@ function App() {
         </Route>
         <Route path="services">
           <Route index={true} element={<ServiceLayout data={layOutData} />} />
-
           {layOutData.cardsData.map((data, index) => (
-            <Route
-              index={false}
-              path={data.linkTo}
-              element={<ServiceLayout data={data.content} />}
-            />
+            <Route path={`${data.linkTo}`}>
+              <Route
+                index={true}
+                element={<ServiceLayout data={data.page} />}
+              />
+              {data.page.cardsData.map((data, index) => {
+                return (
+                  data.page && (
+                    <Route path={data.linkTo}>
+                      <Route
+                        index={true}
+                        element={<ServiceLayout data={data.page} />}
+                      />
+
+                      {data.page.cardsData.map((data, index) => {
+                        return (
+                          data.page && (
+                            <Route path={data.linkTo}>
+                              <Route
+                                index={true}
+                                element={<ServiceLayout data={data.page} />}
+                              />
+
+                              {data.page.cardsData.map((data, index) => {
+                                return (
+                                  data.page && (
+                                    <Route path={data.linkTo}>
+                                      <Route
+                                        index={true}
+                                        element={
+                                          <ServiceLayout data={data.page} />
+                                        }
+                                      />
+                                    </Route>
+                                  )
+                                );
+                              })}
+                            </Route>
+                          )
+                        );
+                      })}
+                    </Route>
+                  )
+                );
+              })}
+            </Route>
           ))}
         </Route>
         <Route path="/videos" element={<Videos />} />

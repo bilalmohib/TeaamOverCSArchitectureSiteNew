@@ -57,6 +57,20 @@ function Videos() {
                 disc: "Disc",
               }}
             />
+            <YoutubeVideo
+              src="https://www.youtube.com/embed/huE1DmkrH70"
+              popup={{
+                thumbnailID: "huE1DmkrH70",
+                disc: "This is a Thumbnail",
+              }}
+            />
+            <YoutubeVideo
+              src="https://www.youtube.com/embed/huE1DmkrH70"
+              popup={{
+                thumbnailID: "huE1DmkrH70",
+                disc: "Click On it to watch Video",
+              }}
+            />
           </div>
         </div>
       </div>

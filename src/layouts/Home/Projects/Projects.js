@@ -1,12 +1,15 @@
 import ProjectCard from "components/Cards/ProjectCard/ProjectCard";
 import React from "react";
 import styles from "./Projects.module.css";
-import projectImg1 from "assets/images/project-img-1.jpg";
-import projectImg2 from "assets/images/project-img-2.jpg";
-import projectImg3 from "assets/images/project-img-3.jpg";
-import projectImg4 from "assets/images/project-img-4.jpg";
-import projectImg5 from "assets/images/project-img-5.jpg";
-import projectImg6 from "assets/images/project-img-6.jpg";
+
+import projectImg1 from "assets/Website Data/Web-Home-Page-Projects/1.jpg";
+import projectImg2 from "assets/Website Data/Web-Home-Page-Projects/2.jpg";
+import projectImg3 from "assets/Website Data/Web-Home-Page-Projects/3.jpg";
+import projectImg4 from "assets/Website Data/Web-Home-Page-Projects/4.jpg";
+import projectImg5 from "assets/Website Data/Web-Home-Page-Projects/5.jpg";
+import projectImg6 from "assets/Website Data/Web-Home-Page-Projects/6.jpg";
+import projectImg7 from "assets/Website Data/Web-Home-Page-Projects/7.jpg";
+import projectImg8 from "assets/Website Data/Web-Home-Page-Projects/8.jpg";
 
 function Projects({ showTitles = true }) {
   return (
@@ -38,6 +41,8 @@ function Projects({ showTitles = true }) {
         <ProjectCard disc="Bridgehampton Beach House" img={projectImg4} />
         <ProjectCard disc="Southampton House" img={projectImg5} />
         <ProjectCard disc="Bridgehampton House" img={projectImg6} />
+        <ProjectCard disc="In the Works" img={projectImg7} />
+        <ProjectCard disc="Sarasota House" img={projectImg8} />
       </div>
     </div>
   );

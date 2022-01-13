@@ -1,11 +1,11 @@
 import ServiceCard from "components/Cards/ServiceCard/ServiceCard";
 import React from "react";
 import styles from "./Services.module.css";
-import architectureImg from "assets/images/architecture-img.jpg";
-import interiordesignimg from "assets/images/interior-design-img.jpg";
-import furnitureimg from "assets/images/furniture-img.jpg";
-import constructionimg from "assets/images/construction-img.jpg";
-import landscapingimg from "assets/images/landscaping-img.jpg";
+
+import serviceImg1 from "assets/Website Data/Web-Home-Page-Services-icon-boxes/Architecture.jpg";
+import serviceImg2 from "assets/Website Data/Web-Home-Page-Services-icon-boxes/Construction.jpeg";
+import serviceImg3 from "assets/Website Data/Web-Home-Page-Services-icon-boxes/Interior.jpeg";
+import serviceImg4 from "assets/Website Data/Web-Home-Page-Services-icon-boxes/Landscaping.jpg";
 
 function Services() {
   return (
@@ -27,14 +27,10 @@ function Services() {
       </div>
 
       <div className={styles.services_cards}>
-        <ServiceCard title="Architecture" img={architectureImg} />
-        <ServiceCard title="Interior Design" img={interiordesignimg} />
-        {/* <ServiceCard title="Furniture" img={furnitureimg} /> */}
-        <ServiceCard
-          title="Construction-Grey Structure"
-          img={constructionimg}
-        />
-        <ServiceCard title="Landscaping" img={landscapingimg} />
+        <ServiceCard title="Architecture" img={serviceImg1} />
+        <ServiceCard title="Interior Design" img={serviceImg2} />
+        <ServiceCard title="Construction-Grey Structure" img={serviceImg3} />
+        <ServiceCard title="Landscaping" img={serviceImg4} />
       </div>
     </div>
   );
