@@ -18,33 +18,41 @@ function Home() {
       </div>
 
       <div className="mb-100px">
-        <div className="container-wrapper">
-          <div className={styles.home_division}>
-            <div className={styles.home_division_left}>
-              <Services />
+        <div className="mb-70px">
+          <div className="container-wrapper">
+            <div className={styles.home_division}>
+              <div className={styles.home_division_left}>
+                <Services />
 
-              <div className={`${styles.youtubeVideos} mb-75px`}>
-                <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
-                <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
-              </div>
-              <Projects />
-            </div>
-            <div className={styles.home_division_right}>
-              <p className="fs-20px weight-2 mb-20px">The Latest</p>
-
-              <div className={styles.home_division_right_cards_wrapper}>
-                <div>
-                  <LatestCardsWrapper
-                    data={blogsAndNewsData}
-                    title="Blogs & News"
-                  />
+                <div className={`${styles.youtubeVideos} `}>
+                  <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
+                  <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                 </div>
-                <div>
-                  <LatestCardsWrapper data={blogsAndNewsData} title="Videos" />
+              </div>
+              <div className={styles.home_division_right}>
+                <p className="fs-20px weight-2 mb-20px">The Latest</p>
+
+                <div className={styles.home_division_right_cards_wrapper}>
+                  <div>
+                    <LatestCardsWrapper
+                      data={blogsAndNewsData}
+                      title="Blogs & News"
+                    />
+                  </div>
+                  <div>
+                    <LatestCardsWrapper
+                      data={blogsAndNewsData}
+                      title="Videos"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="container-wrapper">
+          <Projects />
         </div>
       </div>
 

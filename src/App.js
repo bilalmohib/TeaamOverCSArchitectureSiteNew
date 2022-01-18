@@ -34,6 +34,7 @@ function App() {
                 index={true}
                 element={<ServiceLayout data={data.page} />}
               />
+
               {data.page.cardsData.map((data, index) => {
                 return (
                   data.page && (

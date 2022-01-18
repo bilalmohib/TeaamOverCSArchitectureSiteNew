@@ -36,6 +36,7 @@ function ServiceLayout({ data }) {
                 text={data.text}
                 disc={data.disc}
                 img={data.img}
+                data={data}
               />
             </div>
           ))}

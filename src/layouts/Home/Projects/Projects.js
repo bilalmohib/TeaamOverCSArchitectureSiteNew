@@ -35,14 +35,118 @@ function Projects({ showTitles = true }) {
       )}
 
       <div className={styles.project_cards}>
-        <ProjectCard disc="In the Works" img={projectImg1} />
-        <ProjectCard disc="Sarasota House" img={projectImg2} />
-        <ProjectCard disc="North Sea House" img={projectImg3} />
-        <ProjectCard disc="Bridgehampton Beach House" img={projectImg4} />
-        <ProjectCard disc="Southampton House" img={projectImg5} />
-        <ProjectCard disc="Bridgehampton House" img={projectImg6} />
-        <ProjectCard disc="In the Works" img={projectImg7} />
-        <ProjectCard disc="Sarasota House" img={projectImg8} />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="In the Works"
+          img={projectImg1}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="Sarasota House"
+          img={projectImg2}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="North Sea House"
+          img={projectImg3}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="Bridgehampton Beach House"
+          img={projectImg4}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="Southampton House"
+          img={projectImg5}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="Bridgehampton House"
+          img={projectImg6}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="In the Works"
+          img={projectImg7}
+        />
+        <ProjectCard
+          data={{
+            details: {
+              designTeam: "",
+              architecturalTeam: "",
+              interiors: "",
+              landscape: "",
+              builder: "",
+              photographyBy: "",
+            },
+          }}
+          disc="Sarasota House"
+          img={projectImg8}
+        />
       </div>
     </div>
   );
