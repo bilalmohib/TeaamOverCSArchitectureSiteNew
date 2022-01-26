@@ -40,7 +40,7 @@ function ProjectCard(props) {
 
       <div onClick={handler} className={`${styles.project_card} pointer`}>
         <div className={styles.project_card_image_wrapper}>
-          <LazyLoad>
+          <LazyLoad once={true}>
             <img src={img} alt="" />
           </LazyLoad>
           <div className={`${styles.text_wrapper} fs-20px white`}>{disc}</div>

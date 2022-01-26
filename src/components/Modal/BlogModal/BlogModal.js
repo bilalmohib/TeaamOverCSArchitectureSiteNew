@@ -8,6 +8,7 @@ import {
   FaGooglePlusSquare,
 } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+import LazyLoad from "react-lazyload";
 
 function BlogModal() {
   const [data, setData] = React.useState(null);
@@ -37,11 +38,13 @@ function BlogModal() {
           size={30}
         />
 
-        <img
-          src={data?.fullImg}
-          className={`${styles.hero_img} mb-40px`}
-          alt=""
-        />
+        <LazyLoad once={true}>
+          <img
+            src={data?.fullImg}
+            className={`${styles.hero_img} mb-40px`}
+            alt=""
+          />
+        </LazyLoad>
 
         <div className="container-wrapper">
           <p className="fs-21px block gray-2 mb-20px">{data?.title}</p>

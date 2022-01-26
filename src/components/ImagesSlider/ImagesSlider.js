@@ -3,13 +3,16 @@ import "./ImagesSlider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation, EffectFade, Autoplay } from "swiper";
+import LazyLoad from "react-lazyload";
 SwiperCore.use([Navigation, EffectFade, Autoplay]);
 
 const SlideComponent = ({ text, img, textTo }) => {
   return (
     <>
       <div className={`aboutus_hero_text_wrapper ${textTo}`}>{text}</div>
-      <img src={img} className="aboutus_hero_bg" alt="" />
+      <LazyLoad once={true}>
+        <img src={img} className="aboutus_hero_bg" alt="" />
+      </LazyLoad>
     </>
   );
 };
