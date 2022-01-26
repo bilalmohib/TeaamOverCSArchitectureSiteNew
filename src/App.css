@@ -236,6 +236,10 @@
   margin: 0 auto;
 }
 
+.flex {
+  display: flex;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

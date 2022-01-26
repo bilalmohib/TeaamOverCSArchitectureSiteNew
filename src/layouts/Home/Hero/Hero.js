@@ -26,7 +26,7 @@ function Hero() {
             Interior Design
           </Link>
           <Link to="/" className="font-roboto fs-25px white weight-4">
-            Construction- Grey Structure
+            Construction
           </Link>
           <Link to="/" className="font-roboto fs-25px white weight-4">
             Project Management

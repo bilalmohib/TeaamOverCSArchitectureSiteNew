@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
 import LazyLoad from "react-lazyload";
@@ -8,6 +8,13 @@ function ProjectCard(props) {
   const { img, disc, text, linkTo = "/", data } = props;
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (show) return (document.body.style.overflowY = "hidden");
+    else {
+      document.body.style.overflowY = "scroll";
+    }
+  });
 
   const handler = () => {
     if (data?.page) {

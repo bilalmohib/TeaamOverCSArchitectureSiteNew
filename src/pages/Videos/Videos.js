@@ -1,9 +1,11 @@
+import LatestCardsWrapper from "components/Cards/LatestCardsWrapper/LatestCardsWrapper";
 import SimpleDropdown from "components/Dropdown/SimpleDropdown/SimpleDropdown";
 import Navbar from "components/Navbar/Navbar";
 import Footer from "layouts/Footer/Footer";
 import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
 import React from "react";
 import styles from "./Videos.module.css";
+import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 
 function Videos() {
   return (
@@ -28,49 +30,59 @@ function Videos() {
             </div>
           </div>
 
-          <div className={styles.videos_container}>
-            <YoutubeVideo
-              src="https://www.youtube.com/embed/huE1DmkrH70"
-              popup={{
-                thumbnailID: "huE1DmkrH70",
-                disc: "This is a Thumbnail",
-              }}
-            />
-            <YoutubeVideo
-              src="https://www.youtube.com/embed/huE1DmkrH70"
-              popup={{
-                thumbnailID: "huE1DmkrH70",
-                disc: "Click On it to watch Video",
-              }}
-            />
-            <YoutubeVideo
-              src="https://www.youtube.com/embed/huE1DmkrH70"
-              popup={{
-                thumbnailID: "huE1DmkrH70",
-                disc: "Disc",
-              }}
-            />
-            <YoutubeVideo
-              src="https://www.youtube.com/embed/huE1DmkrH70"
-              popup={{
-                thumbnailID: "huE1DmkrH70",
-                disc: "Disc",
-              }}
-            />
-            <YoutubeVideo
-              src="https://www.youtube.com/embed/huE1DmkrH70"
-              popup={{
-                thumbnailID: "huE1DmkrH70",
-                disc: "This is a Thumbnail",
-              }}
-            />
-            <YoutubeVideo
-              src="https://www.youtube.com/embed/huE1DmkrH70"
-              popup={{
-                thumbnailID: "huE1DmkrH70",
-                disc: "Click On it to watch Video",
-              }}
-            />
+          <div className={styles.videos_container_wrapper}>
+            <div className={styles.videos_container}>
+              <YoutubeVideo
+                src="https://www.youtube.com/embed/huE1DmkrH70"
+                popup={{
+                  thumbnailID: "huE1DmkrH70",
+                  disc: "This is a Thumbnail",
+                }}
+              />
+              <YoutubeVideo
+                src="https://www.youtube.com/embed/huE1DmkrH70"
+                popup={{
+                  thumbnailID: "huE1DmkrH70",
+                  disc: "Click On it to watch Video",
+                }}
+              />
+              <YoutubeVideo
+                src="https://www.youtube.com/embed/huE1DmkrH70"
+                popup={{
+                  thumbnailID: "huE1DmkrH70",
+                  disc: "Disc",
+                }}
+              />
+              <YoutubeVideo
+                src="https://www.youtube.com/embed/huE1DmkrH70"
+                popup={{
+                  thumbnailID: "huE1DmkrH70",
+                  disc: "Disc",
+                }}
+              />
+              <YoutubeVideo
+                src="https://www.youtube.com/embed/huE1DmkrH70"
+                popup={{
+                  thumbnailID: "huE1DmkrH70",
+                  disc: "This is a Thumbnail",
+                }}
+              />
+              <YoutubeVideo
+                src="https://www.youtube.com/embed/huE1DmkrH70"
+                popup={{
+                  thumbnailID: "huE1DmkrH70",
+                  disc: "Click On it to watch Video",
+                }}
+              />
+            </div>
+            <div className={styles.right_content}>
+              <div style={{ position: "sticky", top: "100px", left: 0 }}>
+                <LatestCardsWrapper
+                  data={blogsAndNewsData}
+                  title="Table of Contents"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

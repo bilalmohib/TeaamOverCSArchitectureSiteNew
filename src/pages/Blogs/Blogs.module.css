@@ -1,19 +1,20 @@
 .blog_card {
   display: flex;
+  align-items: center;
 }
 .blog_card_img {
   flex: 0.8;
   margin-right: 5rem;
   display: flex;
 }
+.blog_card_img img {
+  width: 100%;
+}
 .blog_card_right {
   flex: 1;
   padding: 68px 0 0;
   border-bottom: 1px solid #edeeee;
   padding-bottom: 2rem;
-}
-.blog_card_img img {
-  width: 100%;
 }
 
 .blog_comments {
@@ -37,7 +38,7 @@
   width: fit-content;
   position: fixed;
   top: 120px;
-  right: 100px;
+  left: 80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   z-index: 15;
@@ -85,6 +86,38 @@
 
 .dropdownBodyItem:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.content_container {
+  display: flex;
+}
+.blogCard_wrapper {
+  margin-right: 2rem;
+  flex: 1;
+}
+.right_content {
+  flex: 0.4;
+}
+
+@media (max-width: 1000px) {
+  .content_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .blogCard_wrapper {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+    flex: 1;
+  }
+  .right_content {
+    flex: 0.4;
+  }
 }
 
 @media (max-width: 760px) {

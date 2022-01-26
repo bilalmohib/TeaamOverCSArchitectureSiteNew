@@ -29,7 +29,7 @@ function Services() {
       <div className={styles.services_cards}>
         <ServiceCard title="Architecture" img={serviceImg1} />
         <ServiceCard title="Interior Design" img={serviceImg2} />
-        <ServiceCard title="Construction-Grey Structure" img={serviceImg3} />
+        <ServiceCard title="Construction" img={serviceImg3} />
         <ServiceCard title="Landscaping" img={serviceImg4} />
       </div>
     </div>

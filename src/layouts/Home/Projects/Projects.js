@@ -119,7 +119,7 @@ function Projects({ showTitles = true }) {
           disc="Bridgehampton House"
           img={projectImg6}
         />
-        <ProjectCard
+        {/* <ProjectCard
           data={{
             details: {
               designTeam: "",
@@ -146,7 +146,7 @@ function Projects({ showTitles = true }) {
           }}
           disc="Sarasota House"
           img={projectImg8}
-        />
+        /> */}
       </div>
     </div>
   );

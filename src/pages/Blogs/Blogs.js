@@ -7,6 +7,8 @@ import { FaRegComment } from "react-icons/fa";
 import { BlogsData } from "assets/Data/BlogsData";
 import { FiChevronDown } from "react-icons/fi";
 import { Outlet } from "react-router-dom";
+import LatestCardsWrapper from "components/Cards/LatestCardsWrapper/LatestCardsWrapper";
+import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 
 const BlogCard = ({ data }) => {
   const { img, title, by, on, disc, comments, id } = data;
@@ -106,10 +108,20 @@ function Blogs() {
             </div>
           </div>
 
-          <div className={styles.blogCard_wrapper}>
-            {BlogsData.map((data, index) => (
-              <BlogCard data={data} />
-            ))}
+          <div className={styles.content_container}>
+            <div className={styles.blogCard_wrapper}>
+              {BlogsData.map((data, index) => (
+                <BlogCard data={data} />
+              ))}
+            </div>
+            <div className={styles.right_content}>
+              <div style={{ position: "sticky", top: "100px", left: 0 }}>
+                <LatestCardsWrapper
+                  data={blogsAndNewsData}
+                  title="Table of Contents"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

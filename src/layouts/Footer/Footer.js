@@ -18,7 +18,7 @@ function Footer() {
         <div className={`container-wrapper`}>
           <div className={styles.footerTop}>
             <div>
-              <p className="font-open-sans darkest-red weight-9 fs-14px mb-20px">
+              <p className="font-open-sans darkest-red weight-9 fs-14px mb-15px">
                 Marketing
               </p>
               <Link
@@ -72,29 +72,29 @@ function Footer() {
             {/* left */}
             <div className={styles.footer_bottom_link}>
               <div>
-                <p className="font-open-sans white weight-6 fs-12px">
+                {/* <p className="font-open-sans white weight-6 fs-12px">
                   © Chapman Taylor 2021
-                </p>
+                </p> */}
                 <p className="font-open-sans white weight-6 fs-12px">
                   All rights reserved
                 </p>
               </div>
               <div>
-                <Link to="/" className="font-open-sans white weight-6 fs-12px">
+                {/* <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   Preferences Centre
-                </Link>
+                </Link> */}
                 <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   Cookies Policy
                 </Link>
                 <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   Privacy Policy
                 </Link>
-                <Link to="/" className="font-open-sans white weight-6 fs-12px">
+                {/* <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   Modern Slavery Statement
-                </Link>
-                <Link to="/" className="font-open-sans white weight-6 fs-12px">
+                </Link> */}
+                {/* <Link to="/" className="font-open-sans white weight-6 fs-12px">
                   COVID-19 - Return to work (UK) - April 2021
-                </Link>
+                </Link> */}
               </div>
             </div>
 
