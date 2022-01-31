@@ -11,6 +11,7 @@ import React from "react";
 import Videos from "pages/Videos/Videos";
 import Contact from "pages/Contact/Contact";
 import { layOutData } from "assets/Data/layoutData";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function App() {
   React.useEffect(() => {

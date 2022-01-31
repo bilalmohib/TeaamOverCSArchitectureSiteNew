@@ -4,9 +4,17 @@ import React from "react";
 import styles from "./Services.module.css";
 import Footer from "layouts/Footer/Footer";
 import ProjectCard from "components/Cards/ProjectCard/ProjectCard";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function ServiceLayout({ data }) {
+function ServiceLayout(props) {
+  const { data } = props;
   const { sliderData, cardsData, pageName } = data;
+  const location = useLocation();
+  const navigate = useNavigate();
+  const PATH = location.pathname;
+  const SPLITED_PATH = PATH.split("/");
+  const PAGENAME = SPLITED_PATH.slice(1, SPLITED_PATH.length).join("->");
+  const PATHSARRAY = SPLITED_PATH.slice(1, SPLITED_PATH.length);
 
   return (
     <div>
@@ -22,8 +30,57 @@ function ServiceLayout({ data }) {
 
       <div className="container-wrapper">
         {pageName ? (
-          <p className="fs-30px weight-6 darkest-red mb-30px uppercase">
-            {pageName}
+          <p
+            className={`${styles.linkdefiner} fs-30px weight-6 darkest-red mb-30px uppercase`}
+          >
+            {/* BEFORE */}
+            {/* {SPLITED_PATH.slice(1, SPLITED_PATH.length).map((a, index) => {
+              return (
+                <>
+                  <span>
+                    {SPLITED_PATH.slice(1, SPLITED_PATH.length).slice(
+                      index,
+                      index + 1
+                    )}
+                  </span>
+                  {index + 1 ===
+                  SPLITED_PATH.slice(1, SPLITED_PATH.length).length ? (
+                    ""
+                  ) : (
+                    <span>{`->`}</span>
+                  )}
+                </>
+              );
+            })} */}
+
+            {location.pathname
+              .split("/")
+              .filter((a) => (a === " " ? null : a))
+              .map((a, index) => {
+                return (
+                  <>
+                    <span
+                      onClick={() =>
+                        navigate(`/${PATHSARRAY.slice(0, index + 1).join("/")}`)
+                      }
+                      className="pointer hover-underline"
+                    >
+                      {SPLITED_PATH.slice(1, SPLITED_PATH.length).slice(
+                        index,
+                        index + 1
+                      )}
+                    </span>
+                    {index + 1 ===
+                    location.pathname
+                      .split("/")
+                      .filter((a) => (a === " " ? null : a)).length ? (
+                      ""
+                    ) : (
+                      <span>{`->`}</span>
+                    )}
+                  </>
+                );
+              })}
           </p>
         ) : (
           ""

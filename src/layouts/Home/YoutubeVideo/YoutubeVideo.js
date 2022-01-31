@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./YoutubeVideo.module.css";
 import { IoClose } from "react-icons/io5";
-import LazyLoad from "react-lazyload";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Popup = ({ src, state }) => {
   const { setShow } = state;
@@ -36,14 +37,12 @@ function YoutubeVideo({ src, popup = false }) {
       {popup ? (
         <>
           <div className={`${styles.youtubeVideos} mb-15px`}>
-            <LazyLoad once={true}>
-              <img
-                src={`https://img.youtube.com/vi/${thumbnailID}/0.jpg`}
-                alt=""
-                className="youtube_video_thumbnail pointer "
-                onClick={() => setShow(!show)}
-              />
-            </LazyLoad>
+            <LazyLoadImage
+              src={`https://img.youtube.com/vi/${thumbnailID}/0.jpg`}
+              alt=""
+              className="youtube_video_thumbnail pointer "
+              onClick={() => setShow(!show)}
+            />
           </div>
 
           {disc ? <p className="fs-16px gray">{disc}</p> : ""}

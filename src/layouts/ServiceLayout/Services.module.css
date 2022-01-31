@@ -16,6 +16,10 @@
   color: #e10600;
 }
 
+.linkdefiner span + span {
+  margin-left: 0.8rem;
+}
+
 @media (max-width: 1000px) {
   .cards {
     grid-template-columns: 1fr 1fr 1fr;

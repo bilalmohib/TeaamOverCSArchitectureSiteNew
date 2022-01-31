@@ -9,16 +9,15 @@ import { FiChevronDown } from "react-icons/fi";
 import { Outlet } from "react-router-dom";
 import LatestCardsWrapper from "components/Cards/LatestCardsWrapper/LatestCardsWrapper";
 import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
-import LazyLoad from "react-lazyload";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const BlogCard = ({ data }) => {
   const { img, title, by, on, disc, comments, id } = data;
   return (
     <div className={styles.blog_card}>
       <Link to={id} className={styles.blog_card_img}>
-        <LazyLoad once={true}>
-          <img src={img} alt="" />
-        </LazyLoad>
+        <LazyLoadImage alt={"adskjhasd"} src={img} />
       </Link>
       <div className={styles.blog_card_right}>
         <Link to={id} className="fs-21px block gray-2 mb-25px">

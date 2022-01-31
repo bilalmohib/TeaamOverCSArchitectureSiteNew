@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import useMediaQuery from "hooks/useMediaQuery";
-import LazyLoad from "react-lazyload";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function CardDetailsPopup({ img, show, setShow }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -151,9 +151,7 @@ function CardDetailsPopup({ img, show, setShow }) {
           </div>
         </div>
 
-        <LazyLoad once={true}>
-          <img src={img} className={styles.image} alt="" />
-        </LazyLoad>
+        <LazyLoadImage alt={"adskjhasd"} className={styles.image} src={img} />
       </div>
     </div>
   );

@@ -4,14 +4,17 @@ import styles from "./Hero.module.css";
 import whatsappIcon from "assets/images/whatsapp-btn.png";
 
 import heroImg from "assets/images/construction.jpg";
-import LazyLoad from "react-lazyload";
+
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Hero() {
   return (
     <div className={styles.hero}>
-      <LazyLoad once={true}>
-        <img src={heroImg} className={styles.heroImg} alt="" />
-      </LazyLoad>
+      <LazyLoadImage
+        alt={"adskjhasd"}
+        src={heroImg}
+        className={styles.heroImg}
+      />
       <div className={styles.hero_center}>
         <p className="fs-52px white weight-5 mb-15px text-center">
           Let’s inspire you with our work
@@ -41,9 +44,7 @@ function Hero() {
         <div className={`${styles.whatsappBtnStatus} fs-16px white`}>
           WhatsApp us
         </div>
-        <LazyLoad once={true}>
-          <img src={whatsappIcon} alt="" />
-        </LazyLoad>
+        <LazyLoadImage alt={"adskjhasd"} src={whatsappIcon} />
       </div>
 
       <div className={styles.scrollIndicator}></div>

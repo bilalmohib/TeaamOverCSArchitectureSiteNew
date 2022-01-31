@@ -18,7 +18,7 @@
   width: 100%;
 }
 
-.project_card img {
+.project_card_image_wrapper img {
   width: 100% !important;
   height: 100%;
   min-width: 100%;
