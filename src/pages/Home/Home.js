@@ -1,3 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./Home.module.css";
 import LatestCardsWrapper from "components/Cards/LatestCardsWrapper/LatestCardsWrapper";
 import Navbar from "components/Navbar/Navbar";
 import Footer from "layouts/Footer/Footer";
@@ -5,12 +7,9 @@ import Hero from "layouts/Home/Hero/Hero";
 import Projects from "layouts/Home/Projects/Projects";
 import Services from "layouts/Home/Services/Services";
 import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
-import React, { useEffect, useRef, useState } from "react";
-import styles from "./Home.module.css";
 import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 import message_icon from "assets/images/message-icon.png";
 import { IoCloseCircleSharp, IoSendSharp } from "react-icons/io5";
-import { IoMdSend } from "react-icons/io";
 import logo_2 from "assets/images/logo-2.png";
 
 const Message = ({ msg, name, isAdmin = false }) => {
