@@ -1,0 +1,17 @@
+.inputAdmin {
+    border: 1px solid rgba(41, 41, 41, 0.849);
+    font-size: 20px;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+.text-danger {
+    color: red;
+}
+.headings_admin_page {
+    font-weight: normal;
+    color: rgb(56, 56, 56);
+    font-family: cursive;
+    margin-bottom:5px;
+}
