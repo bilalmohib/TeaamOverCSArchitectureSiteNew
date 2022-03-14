@@ -10,11 +10,8 @@ import BlogModal from "components/Modal/BlogModal/BlogModal";
 import React from "react";
 import Videos from "pages/Videos/Videos";
 import Contact from "pages/Contact/Contact";
-import Admin from "pages/Admin";
 import { layOutData } from "assets/Data/layoutData";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import AdminProjects from "pages/Admin/AdminProjects";
-import AdminBlogs from "pages/Admin/AdminBlogs";
 
 function App() {
   React.useEffect(() => {
@@ -84,9 +81,6 @@ function App() {
         </Route>
         <Route path="/videos" element={<Videos />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/admin/projects" element={<AdminProjects />} />
-        <Route path="/admin/Blogs" element={<AdminBlogs />} />
       </Routes>
     </Router>
   );
