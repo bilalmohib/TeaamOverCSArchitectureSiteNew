@@ -1,3 +1,3 @@
 # ARCHITECTURE WEBSITE
 
-[Visit Website](https://blissful-wright-aed056.netlify.app/)
+[Visit Website](https://teaamovercsreactjs.vercel.app/)
