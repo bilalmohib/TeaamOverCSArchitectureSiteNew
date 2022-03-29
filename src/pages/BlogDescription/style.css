@@ -1,0 +1,149 @@
+.blog_card {
+    display: flex;
+    align-items: center;
+}
+.blog_card_img {
+    flex: 0.8;
+    margin-right: 5rem;
+    display: flex;
+}
+.blog_card_img img {
+    width: 100%;
+}
+.blog_card_right {
+    flex: 1;
+    padding: 68px 0 0;
+    border-bottom: 1px solid #edeeee;
+    padding-bottom: 2rem;
+}
+
+.blog_comments {
+    display: flex;
+    align-items: center;
+}
+
+.blog_comments > :first-child {
+    margin-right: 0.8rem;
+}
+.blog_comments > p {
+    border-bottom: 1px solid transparent;
+}
+
+.blog_comments > p:hover {
+    border-bottom: 1px solid var(--gray-2);
+    color: var(--gray-2);
+}
+
+.dropdownWrapper {
+    width: fit-content;
+    position: fixed;
+    top: 120px;
+    left: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 15;
+    z-index: 10000;
+}
+.dropdownBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    width: 200px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.dropdownBtn > :last-child {
+    transition: all 0.2s ease;
+}
+.dropdownBtn.active > :last-child {
+    transform: rotate(180deg);
+}
+
+.dropdownBtn.active + .dropdownBody {
+    display: block;
+}
+
+.dropdownBody {
+    display: none;
+    position: absolute;
+    top: 120%;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdownBodyItem {
+    padding: 0.5rem 1rem;
+}
+
+.dropdownBodyItem.active {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dropdownBodyItem:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.content_container {
+    display: flex;
+}
+.blogCard_wrapper {
+    margin-right: 2rem;
+    flex: 1;
+}
+.right_content {
+    flex: 0.4;
+}
+
+@media (max-width: 1000px) {
+    .content_container {
+        display: flex;
+        flex-direction: column;
+    }
+    .blogCard_wrapper {
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+        flex: 1;
+    }
+    .right_content {
+        flex: 0.4;
+    }
+}
+
+@media (max-width: 760px) {
+    .blog_card {
+        flex-direction: column;
+    }
+
+    .blog_card_right {
+        padding: 2rem 0;
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+    .blogCard_wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .blog_card_img {
+        flex: 1;
+        width: 100%;
+        margin-right: 0rem;
+    }
+
+    .dropdownWrapper {
+        top: 110px;
+        right: 40px;
+    }
+}

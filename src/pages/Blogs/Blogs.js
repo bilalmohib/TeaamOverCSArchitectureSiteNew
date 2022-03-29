@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from "react";
 import Navbar from "components/Navbar/Navbar";
 import Footer from "layouts/Footer/Footer";
-import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Blogs.module.css";
 import { FaRegComment } from "react-icons/fa";
@@ -12,35 +12,55 @@ import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const BlogCard = ({ data }) => {
-  const { img, title, by, on, disc, comments, id } = data;
+import { useNavigate } from "react-router-dom";
+
+import "./style.css";
+
+//Importing firebase
+import firebase from "../../firebase";
+import 'firebase/firestore';
+import 'firebase/auth';
+
+const BlogCard = (props) => {
+
+  // uid={element.uid}
+  // userEmail={element.userEmail}
+  // BlogTitle-={element.BlogTitle}
+  // BlogCategory={element.BlogCategory}
+  // BlogDescription={element.BlogDescription}
+  // BlogCoverImageUrl={element.BlogCoverImageUrl}
+  // BlogCoverPara={element.BlogCoverPara}
+  // BlogAuthor={element.BlogAuthor}
+  // BlogSubmissionDate={element.BlogSubmissionDate}
+  // BlogHashTagsArray={element.BlogHashTagsArray}
+
   return (
     <div className={styles.blog_card}>
-      <Link to={id} className={styles.blog_card_img}>
-        <LazyLoadImage alt={"adskjhasd"} src={img} />
+      <Link to={props.uid} className={styles.blog_card_img}>
+        <LazyLoadImage alt={props.uid} src={props.BlogCoverImageUrl} />
       </Link>
       <div className={styles.blog_card_right}>
-        <Link to={id} className="fs-21px block gray-2 mb-25px">
-          {title}
+        <Link to={props.uid} className="fs-21px block gray-2 mb-25px">
+          {props.BlogTitle}
         </Link>
         <p className="fs-18px gray weight-3 mb-25px">
-          By: <span className="weight-5">{by}</span> · {on}
+          By: <span className="weight-5">{props.BlogAuthor}</span> · {props.BlogSubmissionDate}
         </p>
 
-        {comments.length === 0 ? (
+        {props.BlogCoverPara.length === 0 ? (
           ""
         ) : (
           <Link
-            to={id}
+            to={props.uid}
             className={`mb-40px weight-3 fs-18px gray ${styles.blog_comments}`}
           >
-            <FaRegComment /> <p>{comments.length} comments</p>
+            <FaRegComment /> <p>1 comments</p>
           </Link>
         )}
 
-        <p className="fs-18px gray-2 weight-3 mb-35px">{disc}</p>
+        <p id="blog_cover_para" className="fs-18px gray-2 weight-3 mb-35px" dangerouslySetInnerHTML={{ __html: props.BlogDescription }} />
 
-        <Link to={id} className="fs-18px weight-3 gray custom-underline">
+        <Link to={props.uid} className="fs-18px weight-3 gray custom-underline">
           Read More
         </Link>
       </div>
@@ -51,9 +71,8 @@ const BlogCard = ({ data }) => {
 const DropdownItem = ({ title, onClick, selectedValue }) => {
   return (
     <div
-      className={`${styles.dropdownBodyItem} ${
-        selectedValue === title ? styles.active : ""
-      } fs-18px gray weight-3 pointer`}
+      className={`${styles.dropdownBodyItem} ${selectedValue === title ? styles.active : ""
+        } fs-18px gray weight-3 pointer`}
       onClick={onClick}
     >
       {title}
@@ -74,6 +93,81 @@ function Blogs() {
     }
   };
 
+  const navigate = useNavigate();
+
+  const [firestoreData, setFirestoreData] = useState([]);
+  const [status, setStatus] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [signedInUserData, setSignedInUserData] = useState({});
+
+  useEffect(() => {
+
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setStatus(true);
+        setSignedInUserData(user);
+        console.log("........... User email is equal to : ", user.email)
+        // loadData();
+      }
+      else {
+        setStatus(false)
+        setSignedInUserData(null);
+        navigate('/');
+      }
+    })
+
+    console.log("All the data in the staff component is: ", firestoreData);
+
+    if (status) {
+      //SendNotifications();
+      const db = firebase.firestore();
+      db.collection(`Blogs`)
+        .get()
+        .then(snapshot => {
+          // uid: this.state.signedInUserData.uid,
+          // userEmail: this.state.signedInUserData.email,
+          // BlogTitle: this.state.BlogTitle,
+          // BlogCategory: this.state.BlogCategory,
+          // BlogDescription: this.state.BlogDescription,
+          // BlogCoverImageUrl: this.state.BlogFrontImageURL,
+          // BlogCoverPara: this.state.FrontParaBlog,
+          // BlogAuthor: this.state.BlogAuthor,
+          // BlogSubmissionDate: dateTime,
+          // BlogHashTagsArray: this.state.BlogHashTagsArray
+          let data = [];
+          snapshot.forEach(element => {
+            data.push(Object.assign({
+              id: element.id,
+              "uid": element.uid,
+              "userEmail": element.userEmail,
+              "BlogTitle": element.BlogTitle,
+              "BlogCategory": element.BlogCategory,
+              "BlogDescription": element.BlogDescription,
+              "BlogCoverImageUrl": element.BlogCoverImageUrl,
+              "BlogCoverPara": element.BlogCoverPara,
+              "BlogAuthor": element.BlogAuthor,
+              "BlogSubmissionDate": element.BlogSubmissionDate,
+              "BlogHashTagsArray": element.BlogHashTagsArray,
+            }, element.data()))
+          })
+          console.log("data of blogs from cloud is equal to ==> ", data)
+          ///////////////////////////////Here is the code for sending notifications
+          ///////////////////////////////Here is the code for sending notifications
+
+          ///////////////////////////////Here is the code for sending notifications
+          ///////////////////////////////Here is the code for sending notifications
+
+          if (firestoreData.length !== data.length) {
+            setFirestoreData(data);
+            setLoading(true);
+            console.log("Updated")
+          }
+        }).catch(err => {
+          console.log(err)
+        })
+    }
+  })
+
   return (
     <div>
       <Navbar hamburgerColor="black" />
@@ -84,9 +178,8 @@ function Blogs() {
           <div className={styles.dropdownWrapper}>
             <div
               onClick={() => setshowDropdown(!showDropdown)}
-              className={`${styles.dropdownBtn} ${
-                showDropdown ? styles.active : ""
-              } fs-18px weight-3 black pointer`}
+              className={`${styles.dropdownBtn} ${showDropdown ? styles.active : ""
+                } fs-18px weight-3 black pointer`}
             >
               {selectedValue} <FiChevronDown />
             </div>
@@ -112,8 +205,21 @@ function Blogs() {
 
           <div className={styles.content_container}>
             <div className={styles.blogCard_wrapper}>
-              {BlogsData.map((data, index) => (
-                <BlogCard data={data} />
+              {firestoreData.map((element, index) => (
+                <div key={index}>
+                  <BlogCard
+                    uid={element.uid}
+                    userEmail={element.userEmail}
+                    BlogTitle-={element.BlogTitle}
+                    BlogCategory={element.BlogCategory}
+                    BlogDescription={element.BlogDescription}
+                    BlogCoverImageUrl={element.BlogCoverImageUrl}
+                    BlogCoverPara={element.BlogCoverPara}
+                    BlogAuthor={element.BlogAuthor}
+                    BlogSubmissionDate={element.BlogSubmissionDate}
+                    BlogHashTagsArray={element.BlogHashTagsArray}
+                  />
+                </div>
               ))}
             </div>
             <div className={styles.right_content}>

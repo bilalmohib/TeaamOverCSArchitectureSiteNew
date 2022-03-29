@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ServiceLayout from "layouts/ServiceLayout/ServiceLayout";
 import Blogs from "pages/Blogs/Blogs";
 import BlogModal from "components/Modal/BlogModal/BlogModal";
+import BlogDescription from "pages/BlogDescription";
 import React from "react";
 import Videos from "pages/Videos/Videos";
 import Contact from "pages/Contact/Contact";
@@ -25,7 +26,7 @@ function App() {
         <Route path="/get-quote" element={<GetQuote />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blogs />}>
-          <Route path=":blogId" element={<BlogModal />} />
+          <Route path=":blogId" element={<BlogDescription />} />
         </Route>
         <Route path="services">
           <Route index={true} element={<ServiceLayout data={layOutData} />} />
