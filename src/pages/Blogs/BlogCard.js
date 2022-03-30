@@ -77,8 +77,6 @@ const BlogCard = (props) => {
 
                 <p id="blog_cover_para" className="fs-18px gray-2 weight-3 mb-35px" dangerouslySetInnerHTML={{ __html: props.BlogDescription }} />
 
-                <button onClick={() => props.set_seller_data(BlogData)}>Set data</button>
-
                 <br />
 
                 <Link onClick={() => props.set_seller_data(BlogData)} to={`/blogDetails/${props.uid}`} className="fs-18px weight-3 gray custom-underline">
