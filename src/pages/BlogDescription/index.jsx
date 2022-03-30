@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
-import { BlogsData } from "assets/Data/BlogsData";
+//Importing firebase
+import firebase from "../../firebase";
+import 'firebase/firestore';
+import 'firebase/auth';
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
     FaFacebookSquare,
     FaTwitterSquare,
@@ -11,18 +15,102 @@ import { IoCloseSharp } from "react-icons/io5";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+import { connect } from "react-redux";
+import { get_seller_all_data } from '../../store/action/index';
+
 function BlogDescription(props) {
     const [data, setData] = React.useState(null);
+
+    const [firestoreData, setFirestoreData] = useState([]);
+    const [status, setStatus] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [signedInUserData, setSignedInUserData] = useState({});
+
     const { blogId } = useParams();
+
+    // const query = new URLSearchParams(useLocation().search);
+    // const id = query.get("id");
+    // const userEmail = query.get("userEmail");
+
     let navigate = useNavigate();
 
-    React.useEffect(() => {
-        let result = BlogsData.find((data) => data.id === blogId);
-        setData(result);
-    }, [blogId]);
+    // React.useEffect(() => {
+    //     let result = BlogsData.find((data) => data.id === blogId);
+    //     setData(result);
+    // }, [blogId]);
+
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                setStatus(true);
+                setSignedInUserData(user);
+                console.log("........... User email is equal to : ", user.email)
+                // loadData();
+            }
+            else {
+                setStatus(false)
+                setSignedInUserData(null);
+                navigate('/');
+            }
+        })
+
+        console.log("All the data in the staff component is: ", firestoreData);
+
+        if (status) {
+            //SendNotifications();
+            const db = firebase.firestore();
+            db.collection(`Blogs`)
+                .get()
+                .then(snapshot => {
+                    // uid: this.state.signedInUserData.uid,
+                    // userEmail: this.state.signedInUserData.email,
+                    // BlogTitle: this.state.BlogTitle,
+                    // BlogCategory: this.state.BlogCategory,
+                    // BlogDescription: this.state.BlogDescription,
+                    // BlogCoverImageUrl: this.state.BlogFrontImageURL,
+                    // BlogCoverPara: this.state.FrontParaBlog,
+                    // BlogAuthor: this.state.BlogAuthor,
+                    // BlogSubmissionDate: dateTime,
+                    // BlogHashTagsArray: this.state.BlogHashTagsArray
+                    let data = [];
+                    snapshot.forEach(element => {
+                        data.push(Object.assign({
+                            id: element.id,
+                            "uid": element.uid,
+                            "userEmail": element.userEmail,
+                            "BlogTitle": element.BlogTitle,
+                            "BlogCategory": element.BlogCategory,
+                            "BlogDescription": element.BlogDescription,
+                            "BlogCoverImageUrl": element.BlogCoverImageUrl,
+                            "BlogCoverPara": element.BlogCoverPara,
+                            "BlogAuthor": element.BlogAuthor,
+                            "BlogSubmissionDate": element.BlogSubmissionDate,
+                            "BlogHashTagsArray": element.BlogHashTagsArray,
+                        }, element.data()))
+                    })
+                    console.log("data of blogs from cloud is equal to ==> ", data)
+                    ///////////////////////////////Here is the code for sending notifications
+                    ///////////////////////////////Here is the code for sending notifications
+
+                    ///////////////////////////////Here is the code for sending notifications
+                    ///////////////////////////////Here is the code for sending notifications
+
+                    if (firestoreData.length !== data.length) {
+                        setFirestoreData(data);
+                        setLoading(true);
+                        console.log("Updated")
+                    }
+                }).catch(err => {
+                    console.log(err)
+                })
+        }
+    })
 
     React.useEffect(() => {
         document.body.style.overflowY = "hidden";
+
+        props.get_seller_all_data();
+
     }, []);
 
     const goBack = () => {
@@ -50,6 +138,10 @@ function BlogDescription(props) {
                     <p className="fs-18px gray weight-3 mb-50px">
                         By: <span className="weight-5">{data?.by}</span> · {data?.on}
                     </p>
+
+                    <button onClick={() => console.log("The Data is equal to =======> : ", props.SELLER_DATA)}>
+                        Click to get all the data
+                    </button>
 
                     <div className={`blog_disc`}>
                         <div className={`blog_disc_left`}>
@@ -204,4 +296,12 @@ function BlogDescription(props) {
     );
 }
 
-export default BlogDescription;
+const mapStateToProps = (state) => ({
+    SELLER_DATA: state.app.SELL,
+})
+//updating the data of the state
+const mapDispatchToProp = (dispatch) => ({
+    get_seller_all_data: () => dispatch(get_seller_all_data())
+})
+//updating the data of the state
+export default connect(mapStateToProps, mapDispatchToProp)(BlogDescription);

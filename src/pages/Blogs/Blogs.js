@@ -14,59 +14,14 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { useNavigate } from "react-router-dom";
 
+import BlogCard from "./BlogCard";
+
 import "./style.css";
 
 //Importing firebase
 import firebase from "../../firebase";
 import 'firebase/firestore';
 import 'firebase/auth';
-
-const BlogCard = (props) => {
-
-  // uid={element.uid}
-  // userEmail={element.userEmail}
-  // BlogTitle-={element.BlogTitle}
-  // BlogCategory={element.BlogCategory}
-  // BlogDescription={element.BlogDescription}
-  // BlogCoverImageUrl={element.BlogCoverImageUrl}
-  // BlogCoverPara={element.BlogCoverPara}
-  // BlogAuthor={element.BlogAuthor}
-  // BlogSubmissionDate={element.BlogSubmissionDate}
-  // BlogHashTagsArray={element.BlogHashTagsArray}
-
-  return (
-    <div className={styles.blog_card}>
-      <Link to={props.uid} className={styles.blog_card_img}>
-        <LazyLoadImage alt={props.uid} src={props.BlogCoverImageUrl} />
-      </Link>
-      <div className={styles.blog_card_right}>
-        <Link to={props.uid} className="fs-21px block gray-2 mb-25px">
-          {props.BlogTitle}
-        </Link>
-        <p className="fs-18px gray weight-3 mb-25px">
-          By: <span className="weight-5">{props.BlogAuthor}</span> · {props.BlogSubmissionDate}
-        </p>
-
-        {props.BlogCoverPara.length === 0 ? (
-          ""
-        ) : (
-          <Link
-            to={props.uid}
-            className={`mb-40px weight-3 fs-18px gray ${styles.blog_comments}`}
-          >
-            <FaRegComment /> <p>1 comments</p>
-          </Link>
-        )}
-
-        <p id="blog_cover_para" className="fs-18px gray-2 weight-3 mb-35px" dangerouslySetInnerHTML={{ __html: props.BlogDescription }} />
-
-        <Link to={props.uid} className="fs-18px weight-3 gray custom-underline">
-          Read More
-        </Link>
-      </div>
-    </div>
-  );
-};
 
 const DropdownItem = ({ title, onClick, selectedValue }) => {
   return (
@@ -137,7 +92,7 @@ function Blogs() {
           let data = [];
           snapshot.forEach(element => {
             data.push(Object.assign({
-              id: element.id,
+              "id": element.id,
               "uid": element.uid,
               "userEmail": element.userEmail,
               "BlogTitle": element.BlogTitle,
@@ -210,7 +165,7 @@ function Blogs() {
                   <BlogCard
                     uid={element.uid}
                     userEmail={element.userEmail}
-                    BlogTitle-={element.BlogTitle}
+                    BlogTitle={element.BlogTitle}
                     BlogCategory={element.BlogCategory}
                     BlogDescription={element.BlogDescription}
                     BlogCoverImageUrl={element.BlogCoverImageUrl}

@@ -25,7 +25,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/get-quote" element={<GetQuote />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/blogs" element={<Blogs />}>
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogDetails" element={<Blogs />}>
           <Route path=":blogId" element={<BlogDescription />} />
         </Route>
         <Route path="services">
@@ -36,7 +37,6 @@ function App() {
                 index={true}
                 element={<ServiceLayout data={data.page} />}
               />
-
               {data.page.cardsData.map((data, index) => {
                 return (
                   data.page && (
