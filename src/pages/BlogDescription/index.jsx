@@ -50,7 +50,7 @@ function BlogDescription(props) {
             else {
                 setStatus(false)
                 setSignedInUserData(null);
-                navigate('/');
+                // navigate('/');
             }
         })
 
