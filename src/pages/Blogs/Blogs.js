@@ -74,7 +74,7 @@ function Blogs() {
 
     console.log("All the data in the staff component is: ", firestoreData);
 
-    if (status) {
+    // if (status) {
       //SendNotifications();
       const db = firebase.firestore();
       db.collection(`Blogs`)
@@ -121,7 +121,7 @@ function Blogs() {
         }).catch(err => {
           console.log(err)
         })
-    }
+    // }
   })
 
   return (
