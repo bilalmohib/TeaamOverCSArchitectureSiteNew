@@ -67,7 +67,8 @@ function Blogs() {
       else {
         setStatus(false)
         setSignedInUserData(null);
-        navigate('/');
+        //Will work on the login part later on
+        // navigate('/');
       }
     })
 
