@@ -35,7 +35,7 @@ function Projects({ showTitles = true }) {
       )}
 
       <div className={styles.project_cards}>
-        <ProjectCard
+        {/* <ProjectCard
           data={{
             details: {
               designTeam: "",
@@ -104,21 +104,27 @@ function Projects({ showTitles = true }) {
           }}
           disc="Southampton House"
           img={projectImg5}
-        />
-        <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="Bridgehampton House"
-          img={projectImg6}
-        />
+        /> */}
+
+        {[1, 2, 3, 4, 5, 6].map((v, i) => {
+          return (
+            <ProjectCard
+              // data={{
+              //   details: {
+              //     designTeam: "",
+              //     architecturalTeam: "",
+              //     interiors: "",
+              //     landscape: "",
+              //     builder: "",
+              //     photographyBy: "",
+              //   },
+              // }}
+              disc="Bridgehampton House"
+              img={projectImg6}
+            />
+          )
+        })}
+
         {/* <ProjectCard
           data={{
             details: {
