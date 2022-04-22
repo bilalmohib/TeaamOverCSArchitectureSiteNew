@@ -10,7 +10,7 @@ import { IoClose } from "react-icons/io5";
 import useMediaQuery from "hooks/useMediaQuery";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-function CardDetailsPopup({ img, show, setShow }) {
+function CardDetailsPopup({ img, show, setShow, details }) {
   const [isOpen, setIsOpen] = useState(false);
   const isHeightBellow620 = useMediaQuery("(max-height: 620px)");
 
@@ -19,9 +19,8 @@ function CardDetailsPopup({ img, show, setShow }) {
       <div className={styles.component}>
         <div className={styles.header}>
           <button
-            className={`${styles.detailsToggler} ${
-              isOpen ? styles.active : ""
-            }`}
+            className={`${styles.detailsToggler} ${isOpen ? styles.active : ""
+              }`}
             onClick={() => setIsOpen(!isOpen)}
           >
             <MdAdd size={35} />
@@ -37,9 +36,8 @@ function CardDetailsPopup({ img, show, setShow }) {
         <div className={`${styles.details} ${isOpen ? styles.active : ""}`}>
           <div className={isHeightBellow620 ? "mb-15px" : `mb-30px`}>
             <div
-              className={`${styles.detailsTitles} ${
-                isHeightBellow620 ? "mb-10px" : "mb-15px"
-              }`}
+              className={`${styles.detailsTitles} ${isHeightBellow620 ? "mb-10px" : "mb-15px"
+                }`}
             >
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
@@ -49,9 +47,8 @@ function CardDetailsPopup({ img, show, setShow }) {
             </div>
 
             <div
-              className={`${styles.detailsTitles} ${
-                isHeightBellow620 ? "mb-10px" : "mb-15px"
-              }`}
+              className={`${styles.detailsTitles} ${isHeightBellow620 ? "mb-10px" : "mb-15px"
+                }`}
             >
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
@@ -59,18 +56,16 @@ function CardDetailsPopup({ img, show, setShow }) {
                 Architectural team:
               </p>
               <p
-                className={`${
-                  isHeightBellow620 ? "fs-14px" : "fs-16px"
-                } white `}
+                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
+                  } white `}
               >
-                James Merrell, Aaron Proulx, Jun Lee, Steve Soule
+                {details.architecturalTeam}
               </p>
             </div>
 
             <div
-              className={`${styles.detailsTitles} ${
-                isHeightBellow620 ? "mb-10px" : "mb-15px"
-              }`}
+              className={`${styles.detailsTitles} ${isHeightBellow620 ? "mb-10px" : "mb-15px"
+                }`}
             >
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
@@ -78,18 +73,16 @@ function CardDetailsPopup({ img, show, setShow }) {
                 Interiors:
               </p>{" "}
               <p
-                className={`${
-                  isHeightBellow620 ? "fs-14px" : "fs-16px"
-                } white `}
+                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
+                  } white `}
               >
-                Brian Brady
+                {details.interiors}
               </p>
             </div>
 
             <div
-              className={`${styles.detailsTitles} ${
-                isHeightBellow620 ? "mb-10px" : "mb-15px"
-              }`}
+              className={`${styles.detailsTitles} ${isHeightBellow620 ? "mb-10px" : "mb-15px"
+                }`}
             >
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
@@ -97,11 +90,10 @@ function CardDetailsPopup({ img, show, setShow }) {
                 Landscape:
               </p>{" "}
               <p
-                className={`${
-                  isHeightBellow620 ? "fs-14px" : "fs-16px"
-                } white `}
+                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
+                  } white `}
               >
-                LaGuardia Design Group
+                {details.landscape}
               </p>
             </div>
 
@@ -112,28 +104,25 @@ function CardDetailsPopup({ img, show, setShow }) {
                 Builder:
               </p>{" "}
               <p
-                className={`${
-                  isHeightBellow620 ? "fs-14px" : "fs-16px"
-                } white `}
+                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
+                  } white `}
               >
-                Aran Construction
+                {details.builder}
               </p>
             </div>
           </div>
 
           <p
-            className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} white ${
-              isHeightBellow620 ? "mb-10px" : "mb-30px"
-            }`}
+            className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} white ${isHeightBellow620 ? "mb-10px" : "mb-30px"
+              }`}
           >
-            <span className="gray">Photography by</span> Joshua McHugh
+            <span className="gray">Photography by :</span> {details.photographyBy}
           </p>
 
           <div>
             <p
-              className={`${
-                isHeightBellow620 ? "fs-14px" : "fs-16px"
-              } gray mb-10px`}
+              className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
+                } gray mb-10px`}
             >
               Share:
             </p>{" "}

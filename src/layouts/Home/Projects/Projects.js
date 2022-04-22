@@ -1,5 +1,5 @@
 import ProjectCard from "components/Cards/ProjectCard/ProjectCard";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Projects.module.css";
 
 import projectImg1 from "assets/Website Data/Web-Home-Page-Projects/1.jpg";
@@ -11,7 +11,91 @@ import projectImg6 from "assets/Website Data/Web-Home-Page-Projects/6.jpg";
 import projectImg7 from "assets/Website Data/Web-Home-Page-Projects/7.jpg";
 import projectImg8 from "assets/Website Data/Web-Home-Page-Projects/8.jpg";
 
+//Importing firebase
+import firebase from "../../../firebase";
+import 'firebase/firestore';
+import 'firebase/auth';
+
 function Projects({ showTitles = true }) {
+
+  const [firestoreData, setFirestoreData] = useState([]);
+  const [status, setStatus] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [signedInUserData, setSignedInUserData] = useState({});
+
+  useEffect(() => {
+
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        setStatus(true);
+        setSignedInUserData(user);
+        console.log("........... User email is equal to : ", user.email)
+        // loadData();
+      }
+      else {
+        setStatus(false)
+        setSignedInUserData(null);
+        //Will work on the login part later on
+        // navigate('/');
+      }
+    })
+
+    console.log("All the data in the staff component is: ", firestoreData);
+
+    // if (status) {
+    //SendNotifications();
+    const db = firebase.firestore();
+    db.collection(`Projects`)
+      .get()
+      .then(snapshot => {
+        let data = [];
+        snapshot.forEach(element => {
+          data.push(Object.assign({
+            "id": element.id,
+            "uid": element.uid,
+            "userEmail": element.userEmail,
+            "Title": element.Title,
+            "Category": element.Category,
+            "Description": element.Description,
+            "ImageURLArray": element.ImageURLArray,
+            "Architects": element.Architects,
+            "Area": element.Area,
+            "CompletionDate": element.CompletionDate,
+            "StructuralEngineers": element.StructuralEngineers,
+            "LandscapeArchitects": element.LandscapeArchitects,
+            "City": element.City,
+            "Country": element.Country,
+            "GoogleMapLink": element.GoogleMapLink,
+            "Key": element.Key,
+            "timeSubmitted": element.timeSubmitted,
+            //New entities
+            "ProjectSector": element.ProjectSector,
+            "ProjectService": element.ProjectService,
+            "ArchitecturalTeam": element.ArchitecturalTeam,
+            "InteriorPersons": element.InteriorPersons,
+            "LandscapePersons": element.LandscapePersons,
+            "BuilderArchitects": element.BuilderArchitects,
+            "PhotographyPersons": element.PhotographyPersons
+          }, element.data()))
+        })
+        console.log("data of projects from cloud is equal to ==> ", data)
+        ///////////////////////////////Here is the code for sending notifications
+        ///////////////////////////////Here is the code for sending notifications
+
+        ///////////////////////////////Here is the code for sending notifications
+        ///////////////////////////////Here is the code for sending notifications
+
+        if (firestoreData.length !== data.length) {
+          setFirestoreData(data);
+          setLoading(true);
+          console.log("Updated")
+        }
+      }).catch(err => {
+        console.log(err)
+      })
+    // }
+  })
+
   return (
     <div>
       {showTitles ? (
@@ -106,40 +190,67 @@ function Projects({ showTitles = true }) {
           img={projectImg5}
         /> */}
 
-        {[1, 2, 3, 4, 5, 6].map((v, i) => {
+        {firestoreData.map((element, index) => {
           return (
-            <ProjectCard
-              // data={{
-              //   details: {
-              //     designTeam: "",
-              //     architecturalTeam: "",
-              //     interiors: "",
-              //     landscape: "",
-              //     builder: "",
-              //     photographyBy: "",
-              //   },
-              // }}
-              disc="Bridgehampton House"
-              img={projectImg6}
-            />
+            <div key={index}>
+              <ProjectCard
+                // id={element.id}
+                // uid={element.uid}
+                // userEmail={element.userEmail}
+                // Title={element.Title}
+                // Category={element.Category}
+                // Description={element.Description}
+                // ImageURLArray={element.ImageURLArray}
+                // Architects={element.Architects}
+                // Area={element.Area}
+                // CompletionDate={element.CompletionDate}
+                // StructuralEngineers={element.StructuralEngineers}
+                // LandscapeArchitects={element.LandscapeArchitects}
+                // City={element.City}
+                // Country={element.Country}
+                // GoogleMapLink={element.GoogleMapLink}
+                // Key={element.Key}
+                // timeSubmitted={element.timeSubmitted}
+                // //New entities
+                // ProjectSector={element.ProjectSector}
+                // ProjectService={element.ProjectService}
+                // ArchitecturalTeam={element.ArchitecturalTeam}
+                // InteriorPersons={element.InteriorPersons}
+                // LandscapePersons={element.LandscapePersons}
+                // BuilderArchitects={element.BuilderArchitects}
+                // PhotographyPersons={element.PhotographyPersons} 
+                data={{
+                  details: {
+                    designTeam: "Design Team",
+                    architecturalTeam: element.ArchitecturalTeam,
+                    interiors: element.InteriorPersons,
+                    landscape: element.LandscapePersons,
+                    builder: element.BuilderArchitects,
+                    photographyBy: element.PhotographyPersons,
+                  },
+                }}
+                disc={element.Title}
+                img={element.ImageURLArray[0]}
+              />
+            </div>
           )
         })}
 
         {/* <ProjectCard
           data={{
             details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
+              designTeam: "Design Team",
+              architecturalTeam: "Architectural Team",
+              interiors: "Interiors",
+              landscape: "Landscape",
+              builder: "Builder",
+              photographyBy: "Photography by",
             },
           }}
           disc="In the Works"
           img={projectImg7}
-        />
-        <ProjectCard
+        /> */}
+        {/* <ProjectCard
           data={{
             details: {
               designTeam: "",
