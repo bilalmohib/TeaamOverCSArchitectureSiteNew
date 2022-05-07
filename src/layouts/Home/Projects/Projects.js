@@ -59,12 +59,12 @@ function Projects({ showTitles = true }) {
             "Description": element.Description,
             "ImageURLArray": element.ImageURLArray,
             "Architects": element.Architects,
+            "ProjectClient": element.ProjectClient,
             "Area": element.Area,
             "CompletionDate": element.CompletionDate,
             "StructuralEngineers": element.StructuralEngineers,
             "LandscapeArchitects": element.LandscapeArchitects,
-            "City": element.City,
-            "Country": element.Country,
+            "projectSiteLocation": element.projectSiteLocation,
             "GoogleMapLink": element.GoogleMapLink,
             "Key": element.Key,
             "timeSubmitted": element.timeSubmitted,
@@ -79,11 +79,6 @@ function Projects({ showTitles = true }) {
           }, element.data()))
         })
         console.log("data of projects from cloud is equal to ==> ", data)
-        ///////////////////////////////Here is the code for sending notifications
-        ///////////////////////////////Here is the code for sending notifications
-
-        ///////////////////////////////Here is the code for sending notifications
-        ///////////////////////////////Here is the code for sending notifications
 
         if (firestoreData.length !== data.length) {
           setFirestoreData(data);
