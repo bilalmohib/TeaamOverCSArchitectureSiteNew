@@ -55,7 +55,6 @@ function Projects({ showTitles = true }) {
             "uid": element.uid,
             "userEmail": element.userEmail,
             "Title": element.Title,
-            "Category": element.Category,
             "Description": element.Description,
             "ImageURLArray": element.ImageURLArray,
             "Architects": element.Architects,
