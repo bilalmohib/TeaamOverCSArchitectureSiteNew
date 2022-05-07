@@ -119,106 +119,11 @@ function Projects({ showTitles = true }) {
       )}
 
       <div className={styles.project_cards}>
-        {/* <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="In the Works"
-          img={projectImg1}
-        />
-        <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="Sarasota House"
-          img={projectImg2}
-        />
-        <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="North Sea House"
-          img={projectImg3}
-        />
-        <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="Bridgehampton Beach House"
-          img={projectImg4}
-        />
-        <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="Southampton House"
-          img={projectImg5}
-        /> */}
 
         {firestoreData.map((element, index) => {
           return (
             <div key={index}>
               <ProjectCard
-                // id={element.id}
-                // uid={element.uid}
-                // userEmail={element.userEmail}
-                // Title={element.Title}
-                // Category={element.Category}
-                // Description={element.Description}
-                // ImageURLArray={element.ImageURLArray}
-                // Architects={element.Architects}
-                // Area={element.Area}
-                // CompletionDate={element.CompletionDate}
-                // StructuralEngineers={element.StructuralEngineers}
-                // LandscapeArchitects={element.LandscapeArchitects}
-                // City={element.City}
-                // Country={element.Country}
-                // GoogleMapLink={element.GoogleMapLink}
-                // Key={element.Key}
-                // timeSubmitted={element.timeSubmitted}
-                // //New entities
-                // ProjectSector={element.ProjectSector}
-                // ProjectService={element.ProjectService}
-                // ArchitecturalTeam={element.ArchitecturalTeam}
-                // InteriorPersons={element.InteriorPersons}
-                // LandscapePersons={element.LandscapePersons}
-                // BuilderArchitects={element.BuilderArchitects}
-                // PhotographyPersons={element.PhotographyPersons} 
                 data={{
                   details: {
                     designTeam: "Design Team",
@@ -229,41 +134,19 @@ function Projects({ showTitles = true }) {
                     photographyBy: element.PhotographyPersons,
                   },
                 }}
-                disc={element.Title}
+                projectTitle={element.Title}
+                projectDescription={element.Description}
                 img={element.ImageURLArray[0]}
+                clientName={element.ProjectClient}
+                ProjectService={element.ProjectService}
+                projectSiteLocation={element.projectSiteLocation}
+                Area={element.Area}
+                Description={element.Description}
               />
             </div>
           )
         })}
 
-        {/* <ProjectCard
-          data={{
-            details: {
-              designTeam: "Design Team",
-              architecturalTeam: "Architectural Team",
-              interiors: "Interiors",
-              landscape: "Landscape",
-              builder: "Builder",
-              photographyBy: "Photography by",
-            },
-          }}
-          disc="In the Works"
-          img={projectImg7}
-        /> */}
-        {/* <ProjectCard
-          data={{
-            details: {
-              designTeam: "",
-              architecturalTeam: "",
-              interiors: "",
-              landscape: "",
-              builder: "",
-              photographyBy: "",
-            },
-          }}
-          disc="Sarasota House"
-          img={projectImg8}
-        /> */}
       </div>
     </div>
   );

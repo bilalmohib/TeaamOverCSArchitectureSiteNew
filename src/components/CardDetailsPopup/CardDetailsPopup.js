@@ -10,7 +10,19 @@ import { IoClose } from "react-icons/io5";
 import useMediaQuery from "hooks/useMediaQuery";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-function CardDetailsPopup({ img, show, setShow, details }) {
+function CardDetailsPopup({
+  img,
+  show,
+  setShow,
+  details,
+  projectTitle,
+  projectDescription,
+  clientName,
+  ProjectService,
+  projectSiteLocation,
+  Area,
+  Description
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const isHeightBellow620 = useMediaQuery("(max-height: 620px)");
 
@@ -42,24 +54,13 @@ function CardDetailsPopup({ img, show, setShow, details }) {
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
               >
-                Design Team:
-              </p>
-            </div>
-
-            <div
-              className={`${styles.detailsTitles} ${isHeightBellow620 ? "mb-10px" : "mb-15px"
-                }`}
-            >
-              <p
-                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
-              >
-                Architectural team:
+                Client :
               </p>
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
                   } white `}
               >
-                {details.architecturalTeam}
+                {clientName}
               </p>
             </div>
 
@@ -70,13 +71,13 @@ function CardDetailsPopup({ img, show, setShow, details }) {
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
               >
-                Interiors:
+                Scope :
               </p>{" "}
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
                   } white `}
               >
-                {details.interiors}
+                {ProjectService}
               </p>
             </div>
 
@@ -87,13 +88,13 @@ function CardDetailsPopup({ img, show, setShow, details }) {
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
               >
-                Landscape:
+                Site Location :
               </p>{" "}
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
                   } white `}
               >
-                {details.landscape}
+                {projectSiteLocation}
               </p>
             </div>
 
@@ -101,23 +102,31 @@ function CardDetailsPopup({ img, show, setShow, details }) {
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
               >
-                Builder:
+                Project Size :
               </p>{" "}
               <p
                 className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
                   } white `}
               >
-                {details.builder}
+                {Area}
               </p>
             </div>
-          </div>
 
-          <p
-            className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} white ${isHeightBellow620 ? "mb-10px" : "mb-30px"
-              }`}
-          >
-            <span className="gray">Photography by :</span> {details.photographyBy}
-          </p>
+            <div className={`${styles.detailsTitles} `}>
+              <p
+                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"} gray `}
+              >
+                Description :
+              </p>{" "}
+              <p
+                className={`${isHeightBellow620 ? "fs-14px" : "fs-16px"
+                  } white `}
+              >
+                {projectDescription}
+              </p>
+            </div>
+
+          </div>
 
           <div>
             <p
@@ -140,7 +149,18 @@ function CardDetailsPopup({ img, show, setShow, details }) {
           </div>
         </div>
 
-        <LazyLoadImage alt={"adskjhasd"} className={styles.image} src={img} />
+        <LazyLoadImage
+          alt={projectTitle}
+          style={{
+            display: "block",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            width:"100vw",
+            height:"97.5vh"
+          }}
+          src={img}
+        />
       </div>
     </div>
   );
