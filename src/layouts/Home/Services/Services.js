@@ -19,9 +19,7 @@ function Services() {
           </div>
 
           <p className="fs-16px text-center weight-3 lh-35px">
-            At Galleria Designs our teams of Architects, Interior Designers,
-            Furniture Designers, Landscaping Experts, Engineers and Project
-            Managers collaborate and deliver you your dream projects.
+            We believe in delivering the best of our Architecture, Interior, Furniture & Supervision services.
           </p>
         </div>
       </div>

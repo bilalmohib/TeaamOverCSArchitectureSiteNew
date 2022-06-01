@@ -102,9 +102,7 @@ function Projects({ showTitles = true }) {
             </div>
 
             <p className="fs-16px text-center weight-3 lh-35px">
-              At Galleria Designs our teams of Architects, Interior Designers,
-              Furniture Designers, Landscaping Experts, Engineers and Project
-              Managers collaborate and deliver you your dream projects.
+              We have the best of projects in every major sector like Residential, Commercial, Industrial, Hospitality, Workplaces design and the services for interior and exterior both.
             </p>
           </div>
         </div>
