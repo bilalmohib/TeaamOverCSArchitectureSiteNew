@@ -156,7 +156,7 @@ function Navbar({ hamburgerColor = "white" }) {
                   <a href="#" className="gray" target="_blank">
                     <FaHouzz size={isBellow950 ? 40 : 30} />
                   </a>
-                  <a href="#" className="gray" target="_blank">
+                  <a href="https://www.linkedin.com/company/24996792" className="gray" target="_blank">
                     <AiFillLinkedin size={isBellow950 ? 40 : 30} />
                   </a>
                 </div>
