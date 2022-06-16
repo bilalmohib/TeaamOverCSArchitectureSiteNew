@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Hero.module.css";
 import whatsappIcon from "assets/images/whatsapp-btn.png";
@@ -11,22 +11,26 @@ import "./index.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Hero() {
+  const [muted, setMuted] = useState(true);
+
+  const handleToggleMute = () => setMuted(current => !current);
+
   return (
     <div className={styles.hero}>
-      <video autoPlay muted loop id="myVideo">
+      <video autoPlay muted={muted} loop id="myVideo">
         <source src={videosource} type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
 
       <div class="content">
         <div className={styles.hero_center}>
-          <p className="fs-52px white weight-5 mb-15px text-center">
+          {/* <p className="fs-52px white weight-5 mb-15px text-center">
             Let’s inspire you with our work
           </p>
           <p className="fs-21px white weight-3 font-open-sans text-center mb-15px">
             Click on any of the services offered by Galleria Designs to explore
             our portfolio
-          </p>
+          </p> */}
 
           {/* <div className={styles.hero_cards}>
           <Link to="/" className="font-roboto fs-25px white weight-4">
@@ -43,7 +47,10 @@ function Hero() {
           </Link>
         </div> */}
         </div>
-        <button id="myBtn">Pause</button>
+        <button onClick={handleToggleMute} className="control">
+          {muted ? "Unmute" : "Mute"}
+        </button>
+
       </div>
 
       <div className={styles.whatsappBtn}>
