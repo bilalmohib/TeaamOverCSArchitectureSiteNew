@@ -5,26 +5,30 @@ import whatsappIcon from "assets/images/whatsapp-btn.png";
 
 import heroImg from "assets/images/construction.jpg";
 
+import videosource from "../../../assets/FinalzationVideo.mp4";
+import "./index.css";
+
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Hero() {
   return (
     <div className={styles.hero}>
-      <LazyLoadImage
-        alt={"adskjhasd"}
-        src={heroImg}
-        className={styles.heroImg}
-      />
-      <div className={styles.hero_center}>
-        <p className="fs-52px white weight-5 mb-15px text-center">
-          Let’s inspire you with our work
-        </p>
-        <p className="fs-21px white weight-3 font-open-sans text-center mb-15px">
-          Click on any of the services offered by Galleria Designs to explore
-          our portfolio
-        </p>
+      <video autoPlay muted loop id="myVideo">
+        <source src={videosource} type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
 
-        <div className={styles.hero_cards}>
+      <div class="content">
+        <div className={styles.hero_center}>
+          <p className="fs-52px white weight-5 mb-15px text-center">
+            Let’s inspire you with our work
+          </p>
+          <p className="fs-21px white weight-3 font-open-sans text-center mb-15px">
+            Click on any of the services offered by Galleria Designs to explore
+            our portfolio
+          </p>
+
+          {/* <div className={styles.hero_cards}>
           <Link to="/" className="font-roboto fs-25px white weight-4">
             Architecture
           </Link>
@@ -37,7 +41,9 @@ function Hero() {
           <Link to="/" className="font-roboto fs-25px white weight-4">
             Project Management
           </Link>
+        </div> */}
         </div>
+        <button id="myBtn">Pause</button>
       </div>
 
       <div className={styles.whatsappBtn}>
@@ -47,7 +53,7 @@ function Hero() {
         <LazyLoadImage alt={"adskjhasd"} src={whatsappIcon} />
       </div>
 
-      <div className={styles.scrollIndicator}></div>
+      {/* <div className={styles.scrollIndicator}></div> */}
     </div>
   );
 }

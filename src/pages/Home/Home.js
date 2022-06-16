@@ -10,7 +10,7 @@ import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
 import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 import message_icon from "assets/images/message-icon.png";
 import { IoCloseCircleSharp, IoSendSharp } from "react-icons/io5";
-import logo_2 from "assets/images/logo-2.png";
+import logo_2 from "assets/images/Logo.png";
 
 const Message = ({ msg, name, isAdmin = false }) => {
   return (
@@ -32,8 +32,8 @@ function Home() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([
     {
-      name: "Azam",
-      msg: "Thank you for visiting Amer Adnan Associates. How can we assist you?",
+      name: "Manager TOC",
+      msg: "Welcome! How may i assist you?",
       isAdmin: true,
     },
   ]);
@@ -75,6 +75,7 @@ function Home() {
                 </div>
               </div>
               <div className={styles.home_division_right}>
+                <br /> <br />
                 <p className="fs-20px weight-2 mb-20px">The Latest</p>
 
                 <div className={styles.home_division_right_cards_wrapper}>
@@ -129,8 +130,8 @@ function Home() {
               alt=""
             />
             <div>
-              <p className="fs-14px lh-1 mb-5px white weight-5">Umar</p>
-              <p className="fs-12px lh-1 white weight-4">Cutomer Support</p>
+              <p className="fs-14px lh-1 mb-5px black weight-5">Akhtar Rasool</p>
+              <p className="fs-12px lh-1 black weight-4">Cutomer Support</p>
             </div>
           </div>
 
