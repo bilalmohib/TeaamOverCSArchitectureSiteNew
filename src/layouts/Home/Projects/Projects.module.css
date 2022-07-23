@@ -4,6 +4,14 @@
   gap: 1rem;
 }
 
+.italic{
+  font-style: italic;
+}
+
+.text-warning{
+  color: orange !important;
+}
+
 @media (max-width: 760px) {
   .project_cards {
     grid-template-columns: 1fr 1fr;

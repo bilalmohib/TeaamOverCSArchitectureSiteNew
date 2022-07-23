@@ -12,9 +12,9 @@ function Contact() {
       <Navbar hamburgerColor="black" />
 
       <div className="mt-88px mb-100px">
-        <div className="mb-70px">
+        {/* <div className="mb-70px">
           <ImagesSlider sliderData={sliderData} />
-        </div>
+        </div> */}
         <div className="container-wrapper">
           <div className={styles.contact_info}>
             <div className={styles.contact_info_left}>

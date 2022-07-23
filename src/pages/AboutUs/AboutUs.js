@@ -21,11 +21,11 @@ function AboutUs() {
       <Navbar hamburgerColor="black" />
 
       <div className="mt-88px ">
-        <div className="mb-70px">
+        {/* <div className="mb-70px">
           <ImagesSlider sliderData={sliderData} />
-        </div>
+        </div> */}
 
-        <div className="mb-70px">
+        <div className="mt-130 mb-70px">
           <div className="container-wrapper">
             <div className="aboutus_section">
               <div className="aboutus_section_left">

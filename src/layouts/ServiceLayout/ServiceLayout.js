@@ -20,15 +20,15 @@ function ServiceLayout(props) {
     <div>
       <Navbar hamburgerColor="black" />
 
-      {sliderData ? (
+      {/* {sliderData ? (
         <div className="mt-88px mb-70px">
           <ImagesSlider sliderData={sliderData} />
         </div>
       ) : (
         ""
-      )}
+      )} */}
 
-      <div className="container-wrapper">
+      <div className="container-wrapper mt-130">
         {pageName ? (
           <p
             className={`${styles.linkdefiner} fs-30px weight-6 darkest-red mb-30px uppercase`}

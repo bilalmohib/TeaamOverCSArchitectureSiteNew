@@ -110,37 +110,46 @@ function Projects({ showTitles = true }) {
         ""
       )}
 
-      <div className={styles.project_cards}>
+      <div>
+        {(firestoreData.length > 0) ? (
+          <div className={styles.project_cards}>
+            {firestoreData.map((element, index) => {
+              return (
+                <div key={index}>
+                  <ProjectCard
+                    data={{
+                      details: {
+                        designTeam: "Design Team",
+                        architecturalTeam: element.ArchitecturalTeam,
+                        interiors: element.InteriorPersons,
+                        landscape: element.LandscapePersons,
+                        builder: element.BuilderArchitects,
+                        photographyBy: element.PhotographyPersons,
+                      },
+                    }}
+                    projectTitle={element.Title}
+                    projectDescription={element.Description}
+                    img={element.ImageURLArray[0]}
+                    clientName={element.ProjectClient}
+                    ProjectService={element.ProjectService}
+                    projectSiteLocation={element.projectSiteLocation}
+                    Area={element.Area}
+                    Description={element.Description}
+                  />
 
-        {firestoreData.map((element, index) => {
-          return (
-            <div key={index}>
-              <ProjectCard
-                data={{
-                  details: {
-                    designTeam: "Design Team",
-                    architecturalTeam: element.ArchitecturalTeam,
-                    interiors: element.InteriorPersons,
-                    landscape: element.LandscapePersons,
-                    builder: element.BuilderArchitects,
-                    photographyBy: element.PhotographyPersons,
-                  },
-                }}
-                projectTitle={element.Title}
-                projectDescription={element.Description}
-                img={element.ImageURLArray[0]}
-                clientName={element.ProjectClient}
-                ProjectService={element.ProjectService}
-                projectSiteLocation={element.projectSiteLocation}
-                Area={element.Area}
-                Description={element.Description}
-              />
-            </div>
-          )
-        })}
-
+                </div>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="text-center">
+            <p className="fs-16px text-center weight-3 lh-35px italic text-warning">
+              No Projects Found. Please add projects to see them here ....
+            </p>
+          </div>
+        )}
       </div>
-    </div>
+    </div >
   );
 }
 

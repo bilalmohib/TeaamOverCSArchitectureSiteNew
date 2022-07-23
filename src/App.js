@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "pages/Home/Home";
 import AboutUs from "pages/AboutUs/AboutUs";
+import TodoList from "pages/TodoList";
 import GetQuote from "pages/GetQuote/GetQuote";
 import Projects from "pages/Projects/Projects";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/todo" element={<TodoList />} />
         <Route path="/get-quote" element={<GetQuote />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/blogs" element={<Blogs />} />
