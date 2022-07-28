@@ -60,7 +60,8 @@ function Home() {
     <div>
       <Navbar />
       <div className="mb-70px">
-        <Hero />
+        {/* <Hero /> */}
+        <SlideShow />
       </div>
 
       <div className="mb-100px">
@@ -69,12 +70,11 @@ function Home() {
             <div className={styles.home_division}>
               <div className={styles.home_division_left}>
                 <Services />
-
-                {/* <div className={`${styles.youtubeVideos} `}>
+                <div className={`${styles.youtubeVideos} `}>
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
-                </div> */}
-                <SlideShow />
+                </div>
+                {/* <SlideShow /> */}
               </div>
               <div className={styles.home_division_right}>
                 <br /> <br />

@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./SlideShow.css";
 
-import img1 from "assets/images/slideshow-img-1.jpg";
-import img2 from "assets/images/slideshow-img-2.jpg";
-import img3 from "assets/images/slideshow-img-3.jpg";
-import img4 from "assets/images/slideshow-img-4.jpg";
-import img5 from "assets/images/slideshow-img-5.jpg";
+import img1 from "assets/images/slider-img-1.jpg";
+import img2 from "assets/images/slider-img-2.jpg";
+import img3 from "assets/images/slider-img-3.jpg";
+import img4 from "assets/images/slider-img-4.jpg";
+import img5 from "assets/images/slider-img-5.jpg";
+import img6 from "assets/images/slider-img-6.jpg";
 
 const imgs = [
   { src: img1, caption: "1st img" },
   { src: img2, caption: "Second img" },
   { src: img3, caption: "3rd img" },
   { src: img4, caption: "4th img " },
-  { src: img5, caption: "5th img" }
+  { src: img5, caption: "5th img" },
+  { src: img6, caption: "6th img" }
 ];
 
 const SlideShow = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  
   const onArrowsClick = (direction) => {
     if (currentSlide === imgs.length - 1 && direction > 0) setCurrentSlide(0);
     else if (currentSlide === 0 && direction < 0)
@@ -25,14 +27,18 @@ const SlideShow = () => {
     else setCurrentSlide(currentSlide + direction);
   };
 
+  useEffect(()=>{
+    const timer = setTimeout(()=>onArrowsClick(1), 4000);
+
+    return ()=>clearTimeout(timer)
+  }, [currentSlide])
+
   const renderedSlides = imgs.map((img, index) => {
     const display = index === currentSlide ? "block" : "none";
 
     return (
       <div key={index} className="fade" style={{ display }}>
-        <div className="numbertext">{`${index + 1} \\ ${imgs.length}`}</div>
         <img alt={img.caption} src={img.src} style={{ width: "100%" }} />
-        <div className="text">Caption Text</div>
       </div>
     );
   });
