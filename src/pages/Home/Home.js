@@ -7,6 +7,7 @@ import Hero from "layouts/Home/Hero/Hero";
 import Projects from "layouts/Home/Projects/Projects";
 import Services from "layouts/Home/Services/Services";
 import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
+import SlideShow from "layouts/Home/SlideShow/SlideShow";
 import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 import message_icon from "assets/images/message-icon.png";
 import { IoCloseCircleSharp, IoSendSharp } from "react-icons/io5";
@@ -59,7 +60,8 @@ function Home() {
     <div>
       <Navbar />
       <div className="mb-70px">
-        <Hero />
+        {/* <Hero /> */}
+        <SlideShow />
       </div>
 
       <div className="mb-100px">
@@ -68,11 +70,11 @@ function Home() {
             <div className={styles.home_division}>
               <div className={styles.home_division_left}>
                 <Services />
-
                 <div className={`${styles.youtubeVideos} `}>
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                 </div>
+                {/* <SlideShow /> */}
               </div>
               <div className={styles.home_division_right}>
                 <br /> <br />
