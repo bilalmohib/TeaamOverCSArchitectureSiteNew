@@ -16,6 +16,7 @@ import { layOutData } from "assets/Data/layoutData";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 function App() {
+  // console.log(layOutData);
   React.useEffect(() => {
     document.body.style.overflowY = "scroll";
   }, []);

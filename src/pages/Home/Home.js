@@ -69,7 +69,7 @@ function Home() {
           <div className="container-wrapper">
             <div className={styles.home_division}>
               <div className={styles.home_division_left}>
-                <Services />
+                <Services  />
                 <div className={`${styles.youtubeVideos} `}>
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
