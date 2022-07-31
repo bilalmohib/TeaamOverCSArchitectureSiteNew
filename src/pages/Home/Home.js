@@ -69,7 +69,7 @@ function Home() {
           <div className="container-wrapper">
             <div className={styles.home_division}>
               <div className={styles.home_division_left}>
-                <Services />
+                <Services  />
                 <div className={`${styles.youtubeVideos} `}>
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
                   <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
@@ -139,7 +139,7 @@ function Home() {
 
           <div className={styles.messagesContainer} ref={messagesContainer}>
             {messages.map(({ name, msg, isAdmin = false }, index) => (
-              <Message name={name} msg={msg} isAdmin={isAdmin} />
+              <Message key={index} name={name} msg={msg} isAdmin={isAdmin} />
             ))}
           </div>
 

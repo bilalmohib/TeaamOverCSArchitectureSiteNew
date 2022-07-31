@@ -1,12 +1,30 @@
 import styles from "./Contact.module.css";
 import Navbar from "components/Navbar/Navbar";
 import Footer from "layouts/Footer/Footer";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { sliderData } from "assets/Data/sliderData";
 import ImagesSlider from "components/ImagesSlider/ImagesSlider";
 import Map from "components/Map/Map";
 
+
 function Contact() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_m6h0iz6', 'template_9d1cxam', form.current, '6ysS4tSpQJNeiGq2Q')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+    e.target.reset();
+  };
+
   return (
     <div>
       <Navbar hamburgerColor="black" />
@@ -24,7 +42,7 @@ function Contact() {
                   For all marketing and press enquiries please contact:
                 </p>
 
-                <p className="fs-16px weight-7">Sean Hosey</p>
+                <p className="fs-16px weight-7">Akhtar Rasool</p>
                 <p className="fs-16px weight-4 mb-20px">Marketing Director</p>
 
                 <p className="fs-16px">
@@ -33,7 +51,7 @@ function Contact() {
                     href="tel:+4420 7371 3000"
                     className={`black ${styles.outerLink}`}
                   >
-                    +44 (0)20 7371 3000
+                    +923 111 418 111
                   </a>
                 </p>
                 <p className="fs-16px">
@@ -42,30 +60,46 @@ function Contact() {
                     href="mailto:marketing@chapmantaylor.com"
                     className={`black ${styles.outerLink}`}
                   >
-                    marketing@chapmantaylor.com
+                    info@akhtarrasool.com
                   </a>
                 </p>
               </div>
               <div>
                 <p className="fs-40px weight-4 mb-30px">General Enquiries</p>
 
-                <form action="" className={styles.contact_form}>
+                <form
+                 onSubmit={sendEmail}
+                 ref={form}
+                 action=""
+                 className={styles.contact_form}
+                >
                   <div className={styles.form_row}>
-                    <input type="text" placeholder="Name" className="fs-16px" />
+                    <input
+                     type="text"
+                     placeholder="Name"
+                     className="fs-16px"
+                     name="name"
+                    />
                     <input
                       type="email"
                       placeholder="Email"
                       className="fs-16px"
+                      name="email"
                     />
                   </div>
                   <input
                     type="text"
                     placeholder="Subject"
                     className="fs-16px"
+                    name="subject"
                   />
-                  <textarea placeholder="Message"></textarea>
+                  <textarea 
+                   placeholder="Message"
+                   name="message"
+                  >
+                  </textarea>
 
-                  <label class={`${styles.checkboxRadio} block`}>
+                  <label className={`${styles.checkboxRadio} block`}>
                     <input type="checkbox" name="termsAgreed" value="1" />
                     <span>
                       I authorise the use of my personal data by Chapman Taylor

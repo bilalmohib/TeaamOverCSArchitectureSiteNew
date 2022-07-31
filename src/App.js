@@ -16,7 +16,9 @@ import { layOutData } from "assets/Data/layoutData";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 function App() {
+  
   React.useEffect(() => {
+    // console.log('layOutData',layOutData);
     document.body.style.overflowY = "scroll";
   }, []);
   return (
@@ -34,7 +36,7 @@ function App() {
         <Route path="services">
           <Route index={true} element={<ServiceLayout data={layOutData} />} />
           {layOutData.cardsData.map((data, index) => (
-            <Route path={`${data.linkTo}`}>
+            <Route key={index} path={`${data.linkTo}`}>
               <Route
                 index={true}
                 element={<ServiceLayout data={data.page} />}
@@ -42,7 +44,7 @@ function App() {
               {data.page.cardsData.map((data, index) => {
                 return (
                   data.page && (
-                    <Route path={data.linkTo}>
+                    <Route key={index} path={data.linkTo}>
                       <Route
                         index={true}
                         element={<ServiceLayout data={data.page} />}
@@ -51,7 +53,7 @@ function App() {
                       {data.page.cardsData.map((data, index) => {
                         return (
                           data.page && (
-                            <Route path={data.linkTo}>
+                            <Route key={index} path={data.linkTo}>
                               <Route
                                 index={true}
                                 element={<ServiceLayout data={data.page} />}
@@ -60,7 +62,7 @@ function App() {
                               {data.page.cardsData.map((data, index) => {
                                 return (
                                   data.page && (
-                                    <Route path={data.linkTo}>
+                                    <Route key={index} path={data.linkTo}>
                                       <Route
                                         index={true}
                                         element={

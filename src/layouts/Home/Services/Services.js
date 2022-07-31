@@ -26,10 +26,10 @@ function Services() {
       </div>
 
       <div className={styles.services_cards}>
-        <ServiceCard title="Architecture" img={serviceImg1} />
-        <ServiceCard title="Interior Design" img={serviceImg2} />
-        <ServiceCard title="Construction" img={serviceImg3} />
-        <ServiceCard title="Landscaping" img={serviceImg4} />
+        <ServiceCard linkTo="/services/architecture" title="Architecture" img={serviceImg1} />
+        <ServiceCard linkTo="/services/Interior" title="Interior Design" img={serviceImg2} />
+        <ServiceCard linkTo="services/Construction" title="Construction" img={serviceImg3} />
+        <ServiceCard linkTo="services/Landscaping" title="Landscaping" img={serviceImg4} />
       </div>
     </div>
   );
