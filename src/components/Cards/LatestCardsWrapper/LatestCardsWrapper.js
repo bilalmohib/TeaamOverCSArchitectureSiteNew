@@ -58,8 +58,8 @@ function LatestCardsWrapper({
         }}
       >
         {data.map((data, index) => (
-          <SwiperSlide>
-            <BlogCard key={index} text={data.title} link={data.link} />
+          <SwiperSlide key={index}> 
+            <BlogCard  text={data.title} link={data.link} />
           </SwiperSlide>
         ))}
       </Swiper>

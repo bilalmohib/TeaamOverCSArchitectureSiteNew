@@ -139,7 +139,7 @@ function Home() {
 
           <div className={styles.messagesContainer} ref={messagesContainer}>
             {messages.map(({ name, msg, isAdmin = false }, index) => (
-              <Message name={name} msg={msg} isAdmin={isAdmin} />
+              <Message key={index} name={name} msg={msg} isAdmin={isAdmin} />
             ))}
           </div>
 

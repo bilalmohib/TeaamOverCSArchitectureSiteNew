@@ -33,16 +33,13 @@ function AboutUs() {
                   <p className="fs-40px mb-20px uppercase">Who we are</p>
 
                   <p className="fs-20px mb-15px">
-                    Chapman Taylor is an award-winning practice of global
-                    architects, masterplanners and interior designers, known for
-                    designing places and buildings that are both creative and
-                    successful.
+                    a.The firm works at multiple scales and with various organizations right from private clients to corporates & Local Government. This allows them to experiment and diversify work: master planning, architectural & interior projects, such as luxury villas, high-end residences, and unique offices as well as institutional projects. Akhtar Rasool Architects’ design approach is to re-connect architecture with nature, make optimum use of space, natural materials, lighting & landscape to reinvent and transform living environments and urban spaces. The firm strives to create design that inspires, approaching each project, regardless of size & scale, with an understanding that architecture has a unique power to influence lifestyle and society. Our forte is attention to detail and customization. Honesty to design, client satisfaction, and sustainability are the driving forces, along with the ability to constantly explore & evolve. They are dedicated to unique design approaches adapted to each project, and achieving a balance between functionality & aesthetics, context, climate, material, cost & time frame.
                   </p>
-                  <p className="fs-20px">
+                  {/* <p className="fs-20px">
                     Established in 1959, we have longstanding relationships with
                     many of the world’s leading developers, contractors,
                     consultants, investors and brands.
-                  </p>
+                  </p> */}
                 </div>
                 <div className="aboutus_details">
                   <div>

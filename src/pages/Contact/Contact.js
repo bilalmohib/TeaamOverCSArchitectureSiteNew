@@ -24,7 +24,7 @@ function Contact() {
                   For all marketing and press enquiries please contact:
                 </p>
 
-                <p className="fs-16px weight-7">Sean Hosey</p>
+                <p className="fs-16px weight-7">Akhtar Rasool</p>
                 <p className="fs-16px weight-4 mb-20px">Marketing Director</p>
 
                 <p className="fs-16px">
@@ -33,7 +33,7 @@ function Contact() {
                     href="tel:+4420 7371 3000"
                     className={`black ${styles.outerLink}`}
                   >
-                    +44 (0)20 7371 3000
+                    +923 111 418 111
                   </a>
                 </p>
                 <p className="fs-16px">
@@ -42,7 +42,7 @@ function Contact() {
                     href="mailto:marketing@chapmantaylor.com"
                     className={`black ${styles.outerLink}`}
                   >
-                    marketing@chapmantaylor.com
+                    info@akhtarrasool.com
                   </a>
                 </p>
               </div>
@@ -65,7 +65,7 @@ function Contact() {
                   />
                   <textarea placeholder="Message"></textarea>
 
-                  <label class={`${styles.checkboxRadio} block`}>
+                  <label className={`${styles.checkboxRadio} block`}>
                     <input type="checkbox" name="termsAgreed" value="1" />
                     <span>
                       I authorise the use of my personal data by Chapman Taylor
