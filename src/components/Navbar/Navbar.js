@@ -147,16 +147,16 @@ function Navbar({ hamburgerColor = "white" }) {
                   </NavLink>
                 </div>
                 <div className={styles.navbar_links_right}>
-                  <a href="https://www.facebook.com/Teamovercs.Architects" className="gray" target="_blank">
+                  <a href="https://www.facebook.com/AkhtarRasool.Architects" className="gray" target="_blank">
                     <AiFillFacebook size={isBellow950 ? 40 : 30} />
                   </a>
-                  <a href="https://www.instagram.com/teamovercs.architects/" className="gray" target="_blank">
+                  <a href="https://www.instagram.com/akhtarrasool.architects/" className="gray" target="_blank">
                     <FaInstagramSquare size={isBellow950 ? 40 : 30} />
                   </a>
                   <a href="#" className="gray" target="_blank">
                     <FaHouzz size={isBellow950 ? 40 : 30} />
                   </a>
-                  <a href="https://www.linkedin.com/company/24996792" className="gray" target="_blank">
+                  <a href="https://www.linkedin.com/company/akhtarrasoolarchitects/" className="gray" target="_blank">
                     <AiFillLinkedin size={isBellow950 ? 40 : 30} />
                   </a>
                 </div>

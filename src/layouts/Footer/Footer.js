@@ -34,12 +34,12 @@ function Footer() {
               </p>
 
               <div className={styles.footer_social_icons}>
-                <Link to="/">
+                <a target="_blank" href="https://www.linkedin.com/company/akhtarrasoolarchitects/">
                   <FaLinkedinIn size={25} />
-                </Link>
-                <Link to="/">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/AkhtarRasool.Architects">
                   <FaFacebookF size={25} />
-                </Link>
+                </a>
                 <Link to="/">
                   <FaTwitter size={25} />
                 </Link>
@@ -49,9 +49,9 @@ function Footer() {
                 <Link to="/">
                   <FaPinterest size={25} />
                 </Link>
-                <Link to="/">
+                <a target="_blank" href="https://www.instagram.com/akhtarrasool.architects/">
                   <FaInstagram size={25} />
-                </Link>
+                </a>
               </div>
             </div>
 
