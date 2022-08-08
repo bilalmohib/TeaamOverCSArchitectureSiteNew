@@ -32,7 +32,7 @@ function ImagesSlider({ sliderData }) {
               img={data.image}
               textTo={data.textTo}
               text={data.text.map((text, index) => (
-                <p className="aboutus_hero_text bottom lh-1 fs-57px white italic">
+                <p key={index} className="aboutus_hero_text bottom lh-1 fs-57px white italic">
                   {text ? text : ""}
                 </p>
               ))}
