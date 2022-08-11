@@ -37,10 +37,10 @@ function Footer() {
               </p>
 
               <div className={styles.footer_social_icons}>
-                <a target="_blank" href="https://www.linkedin.com/company/akhtarrasoolarchitects/">
+                <a href="https://www.linkedin.com/company/akhtarrasoolarchitects/" rel="noreferrer">
                   <FaLinkedinIn size={25} />
                 </a>
-                <a target="_blank" href="https://www.facebook.com/AkhtarRasool.Architects">
+                <a rel="noreferrer" href="https://www.facebook.com/AkhtarRasool.Architects">
                   <FaFacebookF size={25} />
                 </a>
                 <Link href="/">
@@ -52,7 +52,7 @@ function Footer() {
                 <Link href="/">
                   <FaPinterest size={25} />
                 </Link>
-                <a target="_blank" href="https://www.instagram.com/akhtarrasool.architects/">
+                <a rel="noreferrer" href="https://www.instagram.com/akhtarrasool.architects/">
                   <FaInstagram size={25} />
                 </a>
               </div>

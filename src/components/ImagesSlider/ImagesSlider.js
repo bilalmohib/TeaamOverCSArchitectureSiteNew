@@ -27,7 +27,7 @@ function ImagesSlider({ sliderData }) {
         }}
       >
         {sliderData.map((data, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <SlideComponent
               img={data.image}
               textTo={data.textTo}

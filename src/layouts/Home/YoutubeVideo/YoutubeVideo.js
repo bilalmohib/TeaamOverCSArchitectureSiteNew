@@ -19,9 +19,9 @@ const Popup = ({ src, state }) => {
           className="youtube_video"
           src={`${src}?&autoplay=1`}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </div>

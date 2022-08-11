@@ -22,7 +22,7 @@ function Hero() {
         Your browser does not support HTML5 video.
       </video>
 
-      <div class="content">
+      <div className="content">
         <div className={styles.hero_center}>
           {/* <p className="fs-52px white weight-5 mb-15px text-center">
             Let’s inspire you with our work

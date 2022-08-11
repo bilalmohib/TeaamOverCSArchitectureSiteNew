@@ -41,16 +41,16 @@ function GetQuote() {
                   className={`${styles.get_quote_form_input} ${styles.required}`}
                 >
                   <select className="fs-14px">
-                    <option value="" class=" ">
+                    <option value="">
                       Architecture
                     </option>
-                    <option value="Interior" class=" ">
+                    <option value="Interior">
                       Interior
                     </option>
-                    <option value="Landscaping" class=" ">
+                    <option value="Landscaping">
                       Landscaping
                     </option>
-                    <option value="Construction" class=" ">
+                    <option value="Construction">
                       Construction
                     </option>
                   </select>
@@ -59,19 +59,19 @@ function GetQuote() {
                   className={`${styles.get_quote_form_input} ${styles.required}`}
                 >
                   <select className="fs-14px">
-                    <option value="" class=" ">
+                    <option value="">
                       Sector
                     </option>
-                    <option value="Residential" class=" ">
+                    <option value="Residential">
                       Residential
                     </option>
-                    <option value="Commercial" class=" ">
+                    <option value="Commercial">
                       Commercial
                     </option>
-                    <option value="Public Building" class=" ">
+                    <option value="Public Building">
                       Public Building
                     </option>
-                    <option value="Farm House" class=" ">
+                    <option value="Farm House">
                       Farm House
                     </option>
                   </select>

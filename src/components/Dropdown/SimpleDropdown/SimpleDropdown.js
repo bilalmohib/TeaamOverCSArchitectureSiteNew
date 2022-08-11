@@ -9,12 +9,12 @@ function SimpleDropdown({ title, options, onChange }) {
   // }
   return (
     <select className="fs-16px simple-select" onChange={onChange}>
-      <option value="" class=" ">
+      <option value="">
         {title}
       </option>
 
       {options.map(({ title }, index) => (
-        <option value={title} class="">
+        <option key={index} value={title}>
           {title}
         </option>
       ))}
