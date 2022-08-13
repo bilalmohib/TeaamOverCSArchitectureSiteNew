@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Hero.module.css";
 import whatsappIcon from "assets/images/whatsapp-btn.png";
 
-import heroImg from "assets/images/construction.jpg";
+// import heroImg from "assets/images/construction.jpg";
 
 import videosource from "../../../assets/FinalzationVideo.mp4";
 import "./index.css";

@@ -1,0 +1,177 @@
+.darkMode {
+  background-color: #000000 !important;
+}
+
+.home_division_right_cards_wrapper> :first-child {
+  margin-bottom: 50px;
+}
+
+.youtubeVideos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  height: 350px;
+  padding-top: 55px;
+}
+
+.outsideYoutubeVideosContainer {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  margin-bottom: 80px;
+}
+
+.outsideYoutubeVideosContainer::after {
+  /* content: "";
+  background-image: url("https://www.timeshighereducation.com/student/sites/default/files/why-study-architecture_0.jpg");
+  background-size: cover;
+  opacity: 0.1;
+  background-color: #ebebeb;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; */
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url('https://www.timeshighereducation.com/student/sites/default/files/why-study-architecture_0.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.messageBtn {
+  position: fixed;
+  bottom: 85px;
+  right: 12px;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(2, 121, 192);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.messageContainer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  width: 270px;
+  /* height: 300px; */
+  /* background-color: white; */
+  z-index: 10000;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.messageContainerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.messageContainerTitleBar {
+  height: 60px;
+  width: 100%;
+  position: relative;
+  width: 100%;
+  background-color: #fbb539;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.message {
+  border-radius: 5px;
+  background-color: white;
+  padding: 1rem;
+}
+
+.messageContainerFooter {
+  background-color: #ebebeb;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.messageInput {
+  display: flex;
+  align-items: center;
+}
+
+.messageInput input {
+  display: block;
+  /* flex: 1; */
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+}
+
+.messageInput>button {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-left: 0.8rem;
+  color: var(--gray-2);
+}
+
+.messagesContainer {
+  display: grid;
+  gap: 0.3rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@media (max-width: 1000px) {
+  .home_division {
+    flex-direction: column;
+  }
+
+  .home_division_left {
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .home_division_right_cards_wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .home_division_right_cards_wrapper> :first-child {
+    margin-bottom: 0px;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home_division_right_cards_wrapper {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .home_division_right_cards_wrapper> :first-child {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .youtubeVideos {
+    grid-template-columns: 1fr;
+  }
+
+  .messagesContainer {
+    max-height: 200px;
+  }
+}

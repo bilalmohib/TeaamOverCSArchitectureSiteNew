@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from 'next/router';
 import styles from "./ProjectCard.module.css";
 
-import CardDetailsPopup from "components/CardDetailsPopup/CardDetailsPopup";
+import CardDetailsPopup from "../../CardDetailsPopup/CardDetailsPopup";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function ProjectCard(props) {
   const { img, text, linkTo = "/", data } = props;
-  const navigate = useNavigate();
+  const router = useRouter();
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -21,7 +22,7 @@ function ProjectCard(props) {
 
   const handler = () => {
     if (data?.page) {
-      navigate(linkTo);
+      router.push(linkTo);
     } else {
       setShow(true);
     }

@@ -14,9 +14,15 @@ const firebaseConfig = {
     measurementId: "G-15LD304GVS"
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+try {
+    firebase.initializeApp(firebaseConfig);
+}
+catch (err) {
+    console.log("Error initializing firebase ==> ", err);
+}
 
+// // Initialize Firebase
+// firebase.initializeApp(firebaseConfig);
 
 const storage = firebase.storage();
 

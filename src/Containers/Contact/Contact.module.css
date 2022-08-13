@@ -1,0 +1,86 @@
+.outerLink:hover {
+  font-weight: 700;
+}
+
+.contact_info {
+  display: flex;
+}
+
+.contact_info_left {
+  flex: 1;
+  margin-right: 5rem;
+}
+
+.contact_info_right {
+  flex: 1;
+}
+
+.contact_form > :not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 0.05em;
+  display: block;
+  border: 1px solid #959595;
+  transition: border 0.3s ease;
+  resize: none;
+}
+
+.contact_form textarea {
+  height: 150px;
+}
+
+.form_row {
+  display: flex;
+}
+
+.form_row > :first-child {
+  margin-right: 1rem;
+}
+
+.checkboxRadio > input {
+  width: auto;
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.contact_form > button[type="submit"] {
+  background: #000;
+  padding: 10px 20px;
+  transition: border 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+  border: 1px solid transparent;
+  margin-left: auto;
+}
+
+.map {
+  height: 400px;
+  position: sticky;
+  top: 120px;
+  left: 0;
+}
+
+@media (max-width: 1000px) {
+  .contact_info {
+    flex-direction: column-reverse;
+  }
+
+  .contact_info_left {
+    flex: 1;
+    margin-right: 0rem;
+  }
+
+  .contact_info_right {
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .map {
+    height: 250px;
+  }
+}

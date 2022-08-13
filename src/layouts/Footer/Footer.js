@@ -9,7 +9,8 @@ import {
   FaInstagram,
   FaAngleUp,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+//Importing next link
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -21,11 +22,13 @@ function Footer() {
               <p className="font-open-sans darkest-red weight-9 fs-14px mb-15px">
                 Marketing
               </p>
-              <Link
-                to="/get-quote"
-                className="font-open-sans white weight-5 fs-14px uppercase pointer"
-              >
-                Get Quote
+              <Link href="/get-quote">
+                <a
+                  className="font-open-sans white weight-5 fs-14px uppercase pointer"
+                  href="#"
+                >
+                  Get Quote
+                </a>
               </Link>
             </div>
             <div>
@@ -40,13 +43,13 @@ function Footer() {
                 <a target="_blank" href="https://www.facebook.com/AkhtarRasool.Architects">
                   <FaFacebookF size={25} />
                 </a>
-                <Link to="/">
+                <Link href="/">
                   <FaTwitter size={25} />
                 </Link>
-                <Link to="/">
+                <Link href="/">
                   <FaYoutube size={25} />
                 </Link>
-                <Link to="/">
+                <Link href="/">
                   <FaPinterest size={25} />
                 </Link>
                 <a target="_blank" href="https://www.instagram.com/akhtarrasool.architects/">
@@ -80,21 +83,24 @@ function Footer() {
                 </p>
               </div>
               <div>
-                {/* <Link to="/" className="font-open-sans white weight-6 fs-12px">
-                  Preferences Centre
-                </Link> */}
-                <Link to="/" className="font-open-sans white weight-6 fs-12px">
-                  Cookies Policy
+                <Link
+                  href="/"
+                >
+                  <a
+                    className="font-open-sans white weight-6 fs-12px"
+                    href="#"
+                  >
+                    Cookies Policy
+                  </a>
                 </Link>
-                <Link to="/" className="font-open-sans white weight-6 fs-12px">
-                  Privacy Policy
+                <Link href="/">
+                  <a
+                    className="font-open-sans white weight-6 fs-12px"
+                    href="#"
+                  >
+                    Privacy Policy
+                  </a>
                 </Link>
-                {/* <Link to="/" className="font-open-sans white weight-6 fs-12px">
-                  Modern Slavery Statement
-                </Link> */}
-                {/* <Link to="/" className="font-open-sans white weight-6 fs-12px">
-                  COVID-19 - Return to work (UK) - April 2021
-                </Link> */}
               </div>
             </div>
 
@@ -106,10 +112,15 @@ function Footer() {
                 >
                   Design:{" "}
                   <Link
-                    to="/"
-                    className="font-open-sans weight-6 white fs-12px"
+                    href="/"
+
                   >
-                    &nbsp;Chapman Taylor Graphics
+                    <a
+                      className="font-open-sans weight-6 white fs-12px"
+                      href="#"
+                    >
+                      &nbsp;Chapman Taylor Graphics
+                    </a>
                   </Link>
                 </p>
               </div>
@@ -119,10 +130,14 @@ function Footer() {
                 >
                   Development:{" "}
                   <Link
-                    to="/"
-                    className="font-open-sans weight-6 white fs-12px"
+                    href="/"
                   >
-                    &nbsp;One Darnley Roads
+                    <a
+                      className="font-open-sans weight-6 white fs-12px"
+                      href="#"
+                    >
+                      &nbsp;One Darnley Roads
+                    </a>
                   </Link>
                 </p>
               </div>

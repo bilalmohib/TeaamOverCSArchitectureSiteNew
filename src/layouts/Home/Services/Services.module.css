@@ -1,7 +1,8 @@
 .services_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.3rem;
+  gap: 0rem;
+  background-color: #cccccc;
 }
 
 @media (max-width: 1200px) {

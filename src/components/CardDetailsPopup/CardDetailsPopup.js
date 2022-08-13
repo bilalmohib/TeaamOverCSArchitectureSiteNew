@@ -7,7 +7,7 @@ import {
   FaPinterestSquare,
 } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import useMediaQuery from "hooks/useMediaQuery";
+import useMediaQuery from "../../hooks/useMediaQuery";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function CardDetailsPopup({

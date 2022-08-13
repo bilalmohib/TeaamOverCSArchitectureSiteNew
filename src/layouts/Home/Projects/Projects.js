@@ -1,15 +1,7 @@
-import ProjectCard from "components/Cards/ProjectCard/ProjectCard";
 import React, { useState, useEffect } from "react";
-import styles from "./Projects.module.css";
 
-import projectImg1 from "assets/Website Data/Web-Home-Page-Projects/1.jpg";
-import projectImg2 from "assets/Website Data/Web-Home-Page-Projects/2.jpg";
-import projectImg3 from "assets/Website Data/Web-Home-Page-Projects/3.jpg";
-import projectImg4 from "assets/Website Data/Web-Home-Page-Projects/4.jpg";
-import projectImg5 from "assets/Website Data/Web-Home-Page-Projects/5.jpg";
-import projectImg6 from "assets/Website Data/Web-Home-Page-Projects/6.jpg";
-import projectImg7 from "assets/Website Data/Web-Home-Page-Projects/7.jpg";
-import projectImg8 from "assets/Website Data/Web-Home-Page-Projects/8.jpg";
+import ProjectCard from "../../../components/Cards/ProjectCard/ProjectCard";
+import styles from "./Projects.module.css";
 
 //Importing firebase
 import firebase from "../../../firebase";
@@ -36,7 +28,7 @@ function Projects({ showTitles = true }) {
         setStatus(false)
         setSignedInUserData(null);
         //Will work on the login part later on
-        // navigate('/');
+        // router.push('/');
       }
     })
 
@@ -96,12 +88,12 @@ function Projects({ showTitles = true }) {
         <div className="mb-50px">
           <div className={`title_wrapper`}>
             <div className="mb-30px ">
-              <p className="text-center fs-30px weight-2 black margin-center  title">
+              <p className="text-center fs-30px weight-2 text-white margin-center  title">
                 OUR Projects
               </p>
             </div>
 
-            <p className="fs-16px text-center weight-3 lh-35px">
+            <p className="fs-16px text-center weight-3 lh-35px text-white">
               We have the best of projects in every major sector like Residential, Commercial, Industrial, Hospitality, Workplaces design and the services for interior and exterior both.
             </p>
           </div>

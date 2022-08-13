@@ -1,13 +1,12 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./Navbar.module.css";
-import logo from "assets/images/Logo.png";
-import { Link, NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
 import { FaInstagramSquare, FaHouzz } from "react-icons/fa";
 import { RiCloseFill } from "react-icons/ri";
-import useMediaQuery from "hooks/useMediaQuery";
-import OutsideClickDetector from "hooks/OutsideClickDetector";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import OutsideClickDetector from "../../hooks/OutsideClickDetector";
 
 function Navbar({ hamburgerColor = "white" }) {
   const [show, setshow] = React.useState(false);
@@ -50,20 +49,21 @@ function Navbar({ hamburgerColor = "white" }) {
 
   return (
     <div
-      className={`${styles.navbar_wrapper} ${scrolled ? styles.scrolled : ""} ${
-        scrollHide ? styles.scrollHide : ""
-      }`}
+      className={`${styles.navbar_wrapper} ${scrolled ? styles.scrolled : ""} ${scrollHide ? styles.scrollHide : ""
+        }`}
     >
       <div className="container-wrapper">
         <div className={styles.navbar}>
-          <Link to="/" className={styles.logo}>
-            <img src={logo} alt="" />
+          <Link href="/">
+            <img
+              className={styles.logo}
+              src={"/assets/images/Logo.png"}
+              alt="" />
           </Link>
 
           <div
-            className={`${styles.navbar_links_wrapper} ${
-              show ? styles.show : ""
-            }`}
+            className={`${styles.navbar_links_wrapper} ${show ? styles.show : ""
+              }`}
             ref={MenuRef}
           >
             <div className={styles.container_wrapper}>
@@ -75,76 +75,81 @@ function Navbar({ hamburgerColor = "white" }) {
                   onClick={() => setshow(false)}
                 />
                 <div className={styles.navbar_links_left}>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
-                      }`
-                    }
-                  >
+                  <Link href="/" className={({ isActive }) =>
+                    `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
+                    }`}>
                     Home
-                  </NavLink>
-                  <NavLink
-                    to="/about-us"
-                    className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
+                  </Link>
+                  <Link
+                    href="/about-us"
+
+                  >
+                    <a className={({ isActive }) =>
+                      `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
                       }`
                     }
+                      href="#">
+                      About Us
+                    </a>
+                  </Link>
+                  <Link
+                    href="/services"
+
                   >
-                    About Us
-                  </NavLink>
-                  <NavLink
-                    to="/services"
-                    className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
+                    <a className={({ isActive }) =>
+                      `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
                       }`
                     }
-                  >
-                    SERVICES
-                  </NavLink>
-                  <NavLink
-                    to="/projects"
+                      href="#">
+                      SERVICES
+                    </a>
+                  </Link>
+                  <Link
+                    href="/projects"
                     className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
+                      `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
                       }`
                     }
                   >
                     projects
-                  </NavLink>
-                  <NavLink
-                    to="/videos"
-                    className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
-                      }`
-                    }
+                  </Link>
+                  <Link
+                    href="/videos"
+
                   >
-                    videos
-                  </NavLink>
-                  <NavLink
-                    to="/blogs"
-                    className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
-                      }`
-                    }
+                    <a
+                      className={({ isActive }) =>
+                        `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
+                        }`
+                      }
+                      href="#">
+                      videos
+                    </a>
+                  </Link>
+                  <Link
+                    href="/blogs"
                   >
-                    blogs
-                  </NavLink>
-                  <NavLink
-                    to="/contact-us"
-                    className={({ isActive }) =>
-                      `${styles.navbar_left_link} fs-18px gray uppercase ${
-                        isActive ? styles.nav_link_active : ""
-                      }`
-                    }
+                    <a
+                      className={({ isActive }) =>
+                        `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
+                        }`
+                      }
+                      href="#">
+                      blogs
+                    </a>
+                  </Link>
+                  <Link
+                    href="/contact-us"
                   >
-                    Contact Us
-                  </NavLink>
+                    <a
+                      className={({ isActive }) =>
+                        `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
+                        }`
+                      }
+                      href="#">
+                      Contact Us
+                    </a>
+                  </Link>
                 </div>
                 <div className={styles.navbar_links_right}>
                   <a href="https://www.facebook.com/AkhtarRasool.Architects" className="gray" target="_blank">

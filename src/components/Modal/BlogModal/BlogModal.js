@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./BlogModal.module.css";
 import { BlogsData } from "assets/Data/BlogsData";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { useRouter } from 'next/router';
 import {
   FaFacebookSquare,
   FaTwitterSquare,
@@ -13,8 +14,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function BlogModal() {
   const [data, setData] = React.useState(null);
-  const { blogId } = useParams();
-  let navigate = useNavigate();
+  const router = useRouter();
+  const { blogId } = router.query;
 
   React.useEffect(() => {
     let result = BlogsData.find((data) => data.id === blogId);
@@ -27,7 +28,7 @@ function BlogModal() {
 
   const goBack = () => {
     document.body.style.overflowY = "scroll";
-    navigate(-1);
+    router.back();
   };
 
   return (
@@ -194,8 +195,10 @@ function BlogModal() {
             >
               Back to Posts
             </button>
-            <Link to="/" className="fs-21px gray-2 weight-3 custom-underline">
-              Next Post
+            <Link href="/">
+              <a className="fs-21px gray-2 weight-3 custom-underline" href="#">
+                Next Post
+              </a>
             </Link>
           </div>
         </div>
