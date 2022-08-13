@@ -18,6 +18,19 @@
   color: white !important;
 }
 
+#blog_cover_para {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  hyphens: auto;
+}
+
+
+.darkMode {
+  background-color: #000000 !important;
+}
+
 :root {
   --fs-57px: 57px;
   --fs-52px: 52px;

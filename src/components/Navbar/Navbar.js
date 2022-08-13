@@ -81,7 +81,7 @@ function Navbar({ hamburgerColor = "white" }) {
                     Home
                   </Link>
                   <Link
-                    href="/about-us"
+                    href="/AboutUs"
 
                   >
                     <a className={({ isActive }) =>
@@ -93,7 +93,7 @@ function Navbar({ hamburgerColor = "white" }) {
                     </a>
                   </Link>
                   <Link
-                    href="/services"
+                    href="/Services"
 
                   >
                     <a className={({ isActive }) =>
@@ -101,20 +101,20 @@ function Navbar({ hamburgerColor = "white" }) {
                       }`
                     }
                       href="#">
-                      SERVICES
+                      Services
                     </a>
                   </Link>
                   <Link
-                    href="/projects"
+                    href="/Projects"
                     className={({ isActive }) =>
                       `${styles.navbar_left_link} fs-18px gray uppercase ${isActive ? styles.nav_link_active : ""
                       }`
                     }
                   >
-                    projects
+                    Projects
                   </Link>
                   <Link
-                    href="/videos"
+                    href="/Videos"
 
                   >
                     <a
@@ -123,11 +123,11 @@ function Navbar({ hamburgerColor = "white" }) {
                         }`
                       }
                       href="#">
-                      videos
+                      Videos
                     </a>
                   </Link>
                   <Link
-                    href="/blogs"
+                    href="/Blogs"
                   >
                     <a
                       className={({ isActive }) =>
@@ -135,11 +135,11 @@ function Navbar({ hamburgerColor = "white" }) {
                         }`
                       }
                       href="#">
-                      blogs
+                      Blog
                     </a>
                   </Link>
                   <Link
-                    href="/contact-us"
+                    href="/ContactUs"
                   >
                     <a
                       className={({ isActive }) =>

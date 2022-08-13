@@ -1,9 +1,6 @@
 import React from "react";
-import "./ImagesSlider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation, EffectFade, Autoplay } from "swiper";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
 SwiperCore.use([Navigation, EffectFade, Autoplay]);
 

@@ -57,7 +57,7 @@ function Home() {
   });
 
   return (
-    <div className={styles.darkMode}>
+    <div className="darkMode">
       <div>
         <Navbar />
         <div className="mb-70px">
@@ -68,7 +68,7 @@ function Home() {
 
       <Services />
 
-      <div className={styles.darkMode}>
+      <div className="darkMode">
         <div className="mb-100px">
           <div className="mb-70px">
             <div className="container-wrapper">

@@ -1,9 +1,10 @@
-import Navbar from "components/Navbar/Navbar";
-import Footer from "layouts/Footer/Footer";
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../layouts/Footer/Footer";
+import ProjectsComponent from "../../layouts/Home/Projects/Projects";
+import SimpleDropdown from "../../components/Dropdown/SimpleDropdown/SimpleDropdown";
+
 import styles from "./Projects.module.css";
-import ProjectsComponent from "layouts/Home/Projects/Projects";
-import SimpleDropdown from "components/Dropdown/SimpleDropdown/SimpleDropdown";
 
 function Projects() {
   const [state, setState] = React.useState({

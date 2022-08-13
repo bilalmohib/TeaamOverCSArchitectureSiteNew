@@ -1,11 +1,12 @@
-import LatestCardsWrapper from "components/Cards/LatestCardsWrapper/LatestCardsWrapper";
-import SimpleDropdown from "components/Dropdown/SimpleDropdown/SimpleDropdown";
-import Navbar from "components/Navbar/Navbar";
-import Footer from "layouts/Footer/Footer";
-import YoutubeVideo from "layouts/Home/YoutubeVideo/YoutubeVideo";
 import React from "react";
+import LatestCardsWrapper from "../../components/Cards/LatestCardsWrapper/LatestCardsWrapper";
+import SimpleDropdown from "../../components/Dropdown/SimpleDropdown/SimpleDropdown";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../layouts/Footer/Footer";
+import YoutubeVideo from "../../layouts/Home/YoutubeVideo/YoutubeVideo";
+import blogsAndNewsData from "../../../public/assets/Data/blogsAndNewsData.json";
+
 import styles from "./Videos.module.css";
-import blogsAndNewsData from "assets/Data/blogsAndNewsData.json";
 
 function Videos() {
   return (

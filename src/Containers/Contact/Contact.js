@@ -1,12 +1,14 @@
-import styles from "./Contact.module.css";
-import Navbar from "components/Navbar/Navbar";
-import Footer from "layouts/Footer/Footer";
 import React from "react";
-import emailjs from '@emailjs/browser';
-import { sliderData } from "assets/Data/sliderData";
-import ImagesSlider from "components/ImagesSlider/ImagesSlider";
-import Map from "components/Map/Map";
 
+// importing components
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../layouts/Footer/Footer";
+import { sliderData } from "../../../public/assets/Data/sliderData";
+import ImagesSlider from "../../components/ImagesSlider/ImagesSlider";
+import Map from "../../components/Map/Map";
+import emailjs from '@emailjs/browser';
+// Importing css
+import styles from "./Contact.module.css";
 
 function Contact() {
 

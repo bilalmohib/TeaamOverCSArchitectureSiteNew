@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../layouts/Footer/Footer";
+
 import styles from "./GetQuote.module.css";
-import Navbar from "components/Navbar/Navbar";
-import Footer from "layouts/Footer/Footer";
 
 function GetQuote() {
   return (

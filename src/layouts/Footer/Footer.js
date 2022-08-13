@@ -14,7 +14,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} `}>
       <div className={styles.footerTop_wrapper}>
         <div className={`container-wrapper`}>
           <div className={styles.footerTop}>
@@ -140,6 +140,7 @@ function Footer() {
                     </a>
                   </Link>
                 </p>
+                <p className="text-white">2nd Floor, 285 MB Phase 6 DHA Lahore</p>
               </div>
             </div>
           </div>

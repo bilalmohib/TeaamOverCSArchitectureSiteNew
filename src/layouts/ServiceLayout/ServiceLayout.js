@@ -1,16 +1,17 @@
-import ImagesSlider from "components/ImagesSlider/ImagesSlider";
-import Navbar from "components/Navbar/Navbar";
 import React from "react";
+import ImagesSlider from "../../components/ImagesSlider/ImagesSlider";
+import Navbar from "../../components/Navbar/Navbar";
+
+import Footer from "../../layouts/Footer/Footer";
+import ProjectCard from "../../components/Cards/ProjectCard/ProjectCard";
 import styles from "./Services.module.css";
-import Footer from "layouts/Footer/Footer";
-import ProjectCard from "components/Cards/ProjectCard/ProjectCard";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 
 function ServiceLayout(props) {
   const { data } = props;
   const { sliderData, cardsData, pageName } = data;
+  const router = useRouter();
   const location = useLocation();
-  const navigate = useNavigate();
   const PATH = location.pathname;
   const SPLITED_PATH = PATH.split("/");
   const PAGENAME = SPLITED_PATH.slice(1, SPLITED_PATH.length).join("->");
@@ -61,7 +62,7 @@ function ServiceLayout(props) {
                   <>
                     <span
                       onClick={() =>
-                        navigate(`/${PATHSARRAY.slice(0, index + 1).join("/")}`)
+                        router.push(`/${PATHSARRAY.slice(0, index + 1).join("/")}`)
                       }
                       className="pointer hover-underline"
                     >
@@ -71,9 +72,9 @@ function ServiceLayout(props) {
                       )}
                     </span>
                     {index + 1 ===
-                    location.pathname
-                      .split("/")
-                      .filter((a) => (a === " " ? null : a)).length ? (
+                      location.pathname
+                        .split("/")
+                        .filter((a) => (a === " " ? null : a)).length ? (
                       ""
                     ) : (
                       <span>{`->`}</span>
