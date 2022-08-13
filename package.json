@@ -23,7 +23,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --output public",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   }
 }
