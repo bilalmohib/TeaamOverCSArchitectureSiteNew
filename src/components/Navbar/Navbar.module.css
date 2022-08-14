@@ -8,6 +8,11 @@
   z-index: 100000;
 }
 
+.darkInitial{
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 100%);;  
+  border-bottom: 0.5px solid white !important;
+}
+
 .container_wrapper {
   /* max-width: 1700px; */
   /* width: 90%; */
@@ -20,6 +25,7 @@
 
 .navbar_wrapper.scrolled {
   background-color: #35313188;
+  border-bottom: 0.5px solid transparent !important;
 }
 
 .navbar_hamburger {

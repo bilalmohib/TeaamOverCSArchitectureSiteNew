@@ -13,7 +13,6 @@ function Services() {
 
   return (
     <div className="mb-100px">
-      <br /> <br />
       <div className="mb-50px">
         <div className={`title_wrapper`}>
           <div className="mb-30px ">

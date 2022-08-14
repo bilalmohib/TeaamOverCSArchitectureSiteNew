@@ -8,7 +8,7 @@ import { RiCloseFill } from "react-icons/ri";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import OutsideClickDetector from "../../hooks/OutsideClickDetector";
 
-function Navbar({ hamburgerColor = "white" }) {
+function Navbar({ hamburgerColor = "white",darkMode }) {
   const [show, setshow] = React.useState(false);
   const [scrolled, setscrolled] = React.useState(false);
   const [lastScrollTop, setlastScrollTop] = React.useState(0);
@@ -49,7 +49,7 @@ function Navbar({ hamburgerColor = "white" }) {
 
   return (
     <div
-      className={`${styles.navbar_wrapper} ${scrolled ? styles.scrolled : ""} ${scrollHide ? styles.scrollHide : ""
+      className={`${(darkMode)?(styles.darkInitial):("")} ${styles.navbar_wrapper} ${scrolled ? styles.scrolled : ""} ${scrollHide ? styles.scrollHide : ""
         }`}
     >
       <div className="container-wrapper">

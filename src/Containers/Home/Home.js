@@ -92,9 +92,9 @@ function Home() {
             className={styles.outsideYoutubeVideosContainer}
           >
             <div className={`${styles.youtubeVideos} `}>
+              {/* <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
               <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
-              <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
-              <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" />
+              <YoutubeVideo src="https://www.youtube.com/embed/huE1DmkrH70" /> */}
             </div>
           </div>
           {/* 

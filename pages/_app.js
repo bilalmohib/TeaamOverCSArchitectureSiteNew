@@ -4,6 +4,7 @@
 import "../src/layouts/Home/SlideShow/SlideShow.css";
 import "../src/index.css";
 import "../src/Containers/AboutUs/AboutUs.css";
+import "../ContainerCSS/Blogs.css";
 
 import "../src/components/ImagesSlider/ImagesSlider.css";
 import "swiper/swiper-bundle.min.css";

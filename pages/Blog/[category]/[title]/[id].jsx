@@ -1,20 +1,36 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
-import Navbar from "../src/components/Navbar/Navbar";
-import IndividualBlogs from "../src/components/IndividualBlogs";
+import Navbar from "../../../../src/components/Navbar/Navbar";
+import IndividualBlogs from "../../../../src/components/IndividualBlogs";
 
 //Importing firebase
-import firebase from "../src/firebase/index";
+import firebase from "../../../../src/firebase/index";
 import "firebase/firestore";
 import "firebase/auth";
 
-const Blogs = () => {
+const BlogsDescription = () => {
+  const router = useRouter();
+  const { category, title, id } = router.query;
+
   const [firestoreData, setFirestoreData] = useState([]);
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(true);
   const [signedInUserData, setSignedInUserData] = useState({});
 
   useEffect(() => {
+    if (typeof window != "undefined") {
+      if (
+        typeof category != "undefined" ||
+        title != "undefined" ||
+        id != "undefined"
+      ) {
+        console.log("Category is : ", category);
+        console.log("Title is : ", title);
+        console.log("Id is : ", id);
+      }
+    }
+
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         setStatus(true);
@@ -77,47 +93,21 @@ const Blogs = () => {
         <Navbar darkMode={true} />
 
         <div className="container darkMode">
-          <h1 className="text-white blogHeader">Blogs</h1>
+          <h1 className="text-white blogHeader">Blogs Description</h1>
           <p className="text-white blogInfo">
-            We write on a variety of topics ranging from technology to politics
-            to architect.
+            Vegan Citrus Olive Oil Cake Recipe - A delicious vegan cake recipe
+            that is made with fresh, organic, and natural ingredients.
           </p>
-          <div className="blogContainer darkMode">
+          {/* <div className="blogContainer darkMode">
             {loading ? (
               <h1 className="text-white">Loading ...</h1>
             ) : (
-              <>
-                {firestoreData.length === 0 ? (
-                  <h1 className="text-white">No Blogs Found</h1>
-                ) : (
-                  <>
-                    {firestoreData.map((data, i) => {
-                      return (
-                        <div key={i}>
-                          <IndividualBlogs
-                            key={data.id}
-                            BlogAuthor={data.BlogAuthor}
-                            BlogCategory={data.BlogCategory}
-                            BlogCoverImageUrl={data.BlogCoverImageUrl}
-                            BlogCoverPara={data.BlogCoverPara}
-                            BlogDescription={data.BlogDescription}
-                            BlogHashTagsArray={data.BlogHashTagsArray}
-                            BlogSubmissionDate={data.BlogSubmissionDate}
-                            BlogTitle={data.BlogTitle}
-                            uid={data.uid}
-                            userEmail={data.userEmail}
-                          />
-                        </div>
-                      )
-                    })}
-                  </>
-                )}
-              </>
+              
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
   );
 };
-export default Blogs;
+export default BlogsDescription;

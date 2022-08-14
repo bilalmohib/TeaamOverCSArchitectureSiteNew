@@ -4,7 +4,7 @@ import ProjectCard from "../../../components/Cards/ProjectCard/ProjectCard";
 import styles from "./Projects.module.css";
 
 //Importing firebase
-import firebase from "../../../firebase";
+import firebase from "../../../firebase/index";
 import 'firebase/firestore';
 import 'firebase/auth';
 
