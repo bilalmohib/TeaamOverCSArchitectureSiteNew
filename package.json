@@ -17,6 +17,7 @@
     "react-map-gl": "^6.1.18",
     "react-scroll": "^1.8.4",
     "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.54.5",
     "swiper": "6.8.4",
     "web-vitals": "^2.1.2",
     "yarn": "^1.22.17"

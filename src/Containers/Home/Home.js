@@ -104,7 +104,7 @@ function Home() {
           <Projects />
         </div>
 
-        {showMessageContainer ? (
+        {/* {showMessageContainer ? (
           ""
         ) : (
           <button
@@ -172,7 +172,7 @@ function Home() {
           </div>
         ) : (
           ""
-        )}
+        )} */}
       </div>
 
       <Footer />

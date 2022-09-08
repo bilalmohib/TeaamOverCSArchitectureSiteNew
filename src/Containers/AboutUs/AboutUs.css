@@ -1,4 +1,4 @@
-.aboutus_details {
+/* .aboutus_details {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,4 +91,218 @@
   .about_map_wrapper {
     height: 250px;
   }
+} */
+
+.aboutus_bg_1 {
+  /* background-image: url(/assets/images/aboutus_bg_1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; */
+}
+
+.about_bg_image {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -250px;
+  background: url('https://gmcontractors.co.uk/wp-content/uploads/2019/08/gallery-workshop-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about_bg_overlay {
+  background: rgba(28, 29, 29, 0.666);
+  overflow: hidden;
+  height: 100%;
+}
+
+.about_bg_overlay h1 {
+  font-size: 70px;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 450px;
+}
+
+.about_container {
+  /* border: 1px solid red; */
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.about_container>Image {
+  width: 40% !important;
+  height: 100%;
+}
+
+.ceo_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: center;
+}
+
+.ceo_Image_Container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+}
+
+.ceo_text_container {
+  width: 60%;
+  height: 100%;
+  padding-left: 30px;
+  /* border: 1px solid red; */
+}
+
+.ceo_text_container>h1 {
+  font-size: 50px;
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.ceo_text_container>h4 {
+  color: rgb(106, 19, 19);
+  font-size: 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.ceo_text_container>p {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: left;
+}
+
+.ceo_Image_Container>Image {
+  width: 100%;
+  height: 100%;
+}
+
+.btn_reach_out_us {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.btn_reach_out_us:hover {
+  background-color: rgb(123, 123, 123);
+  color: #fff;
+  border: 1px solid #000;
+}
+
+.why_choose_us {
+  background-color: #f5f5f7;
+  border: 1px solid black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.why_choose_us>h4 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 5px;
+  color: rgb(106, 19, 19);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.why_choose_us>h5 {
+  font-size: 40px;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 15px;
+  line-height: 45px;
+  color: #212529;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.why_choose_us>p {
+  font-size: 20px;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 15px;
+  line-height: 30px;
+  color: #212529;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.our_team>h4 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 40px;
+  color: rgb(106, 19, 19);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.our_team>h5 {
+  font-size: 23px;
+  font-weight: lighter;
+  /* text-align: cent; */
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 15px;
+  line-height: 35px;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.our_team>p {
+  font-size: 18px;
+  font-weight: lighter;
+  /* text-align: cent; */
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 15px;
+  line-height: 25px;
+  color: #9399a1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.profileContainersBlock {
+  display: grid;
+  background-color: transparent;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  height: 350px;
+  padding-top: 55px;
+  border: 1px solid red;
+  padding-left: 4%;
+  padding-right: 2%;
+}
+
+.profileContainer {
+  border: 1px solid white;
+  margin-right: 8%;
+  height: 300px;
+  background-color: transparent;
+}
+
+.profileImageContainer{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }

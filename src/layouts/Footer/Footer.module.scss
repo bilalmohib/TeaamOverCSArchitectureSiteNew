@@ -1,0 +1,136 @@
+.footer {
+  background-color: #ff0000;
+  height: 500px;
+}
+
+/* Footer Container Ready to start */
+.rtdContainer {
+  background-image: url('https://gmcontractors.co.uk/wp-content/uploads/2019/11/drone_NEW.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 380px;
+  border: 1px solid grey;
+}
+
+.headingrtd {
+  text-align: center;
+  font-size: 30px;
+  color: #FEFEFE;
+  font-weight: bold;
+  margin-top: 110px;
+}
+
+.btnrtd {
+  text-align: center;
+  font-size: 14px;
+  color: #FEFEFE;
+  width: 188px;
+  height: 56px;
+  background-color: #AB2B30;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+/* Footer Container Actual */
+.afContainer {
+  background: #0c1017;
+  height: 225px;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Actual Footer Container Blocks */
+.afblock1 {
+  border: 2px solid red;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo {
+  border: 1px solid green;
+  width: 60px;
+  height: 60px;
+}
+
+.afblock2 {
+  border: 2px solid rgb(0, 255, 30);
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 105px;
+}
+
+.afblock2 ul {
+  list-style-type: none;
+  border-left: 1px solid #1e2128;
+  width: 30%;
+}
+
+.afblock2 ul li {
+  padding-left: 20px;
+  font-size: 14px;
+  padding-top: 10px;
+  color: #FEFEFE;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.afblock3 {
+  border: 2px solid rgb(255, 187, 0);
+  width: 25%;
+}
+
+.btnafStartProject {
+  width: 220px;
+  height: 56px;
+  background-color: transparent;
+  border: 1px solid #FEFEFE;
+  color: #FEFEFE;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.btnafStartProject:hover {
+  cursor: pointer;
+  background-color: #FEFEFE;
+  letter-spacing: 0.2em;
+  color: #0c1017;
+  transition: cubic-bezier(0.95, 0.05, 0.795, 0.035) 0.3s;
+}
+
+/* Actual Footer Container Blocks */
+
+.copyrightContainer {
+  background-color: #0c1017;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #38434a;
+}
+
+.copyrightContainer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyrightContainer ul li {
+  padding-left: 20px;
+  font-size: 14px;
+  color: #FEFEFE;
+  font-weight: 600;
+  cursor: pointer;
+}
