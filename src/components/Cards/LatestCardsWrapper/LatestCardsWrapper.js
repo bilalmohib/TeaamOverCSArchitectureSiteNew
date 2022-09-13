@@ -22,7 +22,7 @@ function LatestCardsWrapper({
   // let navigationNextRef = React.useRef(null);
   return (
     <div className={styles.home_division_cards}>
-      <div className={`${styles.home_division_cards_header} `}>
+      {/* <div className={`${styles.home_division_cards_header} `}>
         <p className="fs-18px weight-6 gray-2 text-center">{title}</p>
         <div className={styles.news_navigation_btn}>
           <button 
@@ -66,7 +66,7 @@ function LatestCardsWrapper({
             <BlogCard  text={data.title} link={data.link} />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 }

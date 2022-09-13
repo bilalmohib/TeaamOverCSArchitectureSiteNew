@@ -76,14 +76,14 @@ function Videos() {
                 }}
               />
             </div>
-            <div className={styles.right_content}>
+            {/* <div className={styles.right_content}>
               <div style={{ position: "sticky", top: "100px", left: 0 }}>
                 <LatestCardsWrapper
                   data={blogsAndNewsData}
                   title="Table of Contents"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
