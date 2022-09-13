@@ -8,7 +8,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import SwiperCore, { Navigation, EffectFade, Autoplay } from "swiper";
-import BlogCard from "../BlogCard/BlogCard";
+// import BlogCard from "../BlogCard/BlogCard";
 SwiperCore.use([Navigation, EffectFade, Autoplay]);
 
 function LatestCardsWrapper({
