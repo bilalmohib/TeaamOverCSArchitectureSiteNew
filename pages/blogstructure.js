@@ -153,4 +153,4 @@ const BlogStructure = [
         "userEmail": "bilalmohib7896@gmail.com"
     }
 ];
-export default BlogData;
+export default BlogStructure;
