@@ -1,12 +1,13 @@
 import React from "react";
 
 // Importing Components
-import Videos from "../src/Containers/Videos/Videos";
+// import Videos from "../src/Containers/Videos/Videos";
 
 const Video = () => {
   return (
     <div>
-      <Videos />
+      {/* <Videos /> */}
+      <h1>This is Videos Page</h1>
     </div>
   );
 };
