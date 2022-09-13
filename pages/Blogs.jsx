@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Navbar from "../src/components/Navbar/Navbar";
+import Footer from "../src/layouts/Footer/Footer";
 import IndividualBlogs from "../src/components/IndividualBlogs";
 
 //Importing firebase
@@ -108,7 +109,7 @@ const Blogs = () => {
                             userEmail={data.userEmail}
                           />
                         </div>
-                      )
+                      );
                     })}
                   </>
                 )}
@@ -116,6 +117,8 @@ const Blogs = () => {
             )}
           </div>
         </div>
+
+        <Footer />
       </div>
     </div>
   );
