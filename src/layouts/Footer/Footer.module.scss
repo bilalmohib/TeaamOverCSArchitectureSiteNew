@@ -188,6 +188,21 @@
     font-size: 12px;
     letter-spacing: 0.1em;
   }
+  .headingrtd {
+    font-size: 25px;
+    color: #FEFEFE;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: normal;
+    // margin-top: 110px;
+  }
+  .btnrtd {
+    font-size: 12px;
+    color: #FEFEFE;
+    width: 168px;
+    height: 46px;
+    // margin-top: 40px;
+  }
 }
 
 @media all and (max-width: 768px){

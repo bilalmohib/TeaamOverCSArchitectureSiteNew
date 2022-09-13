@@ -28,7 +28,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     margin-right: 2rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: black !important;
     width: 100%;
     height: 100%;
@@ -148,7 +148,7 @@
     .blogContainer {
         width: 100% !important;
         margin-right: 0.3rem;
-        border: 1px solid white !important;
+        /* border: 1px solid white !important; */
     }
 
     .blog {
@@ -182,19 +182,22 @@
 
 @media all and (max-width:360px){
     .blog {
-        width: 330px !important;
+        width: 300px !important;
         margin: 0 auto !important;
+        margin-top: 20px !important;
     }
 }
 @media all and (max-width:330px){
     .blog {
         width: 290px !important;
         margin: 0 auto !important;
+        margin-top: 20px !important;
     }
 }
 @media all and (max-width:300px){
     .blog {
         width: 260px !important;
         margin: 0 auto !important;
+        margin-top: 20px !important;
     }
 }
