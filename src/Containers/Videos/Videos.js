@@ -4,7 +4,7 @@ import SimpleDropdown from "../../components/Dropdown/SimpleDropdown/SimpleDropd
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../layouts/Footer/Footer";
 import YoutubeVideo from "../../layouts/Home/YoutubeVideo/YoutubeVideo";
-import blogsAndNewsData from "../../../public/assets/Data/blogsAndNewsData.json";
+// import blogsAndNewsData from "../../../public/assets/Data/blogsAndNewsData.json";
 
 import styles from "./Videos.module.css";
 
